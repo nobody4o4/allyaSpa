@@ -1,5 +1,10 @@
-function Home() {
-  return <div>home</div>;
-}
+import React from 'react'
+import ReviewsMain from '../features/reviewsMain'
 
-export default Home;
+export default function Home() {
+  return (
+    <div className=''>
+        <ReviewsMain />
+    </div>
+  )
+}
