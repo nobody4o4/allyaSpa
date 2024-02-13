@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import bill from "../../assets/bill.png";
 import Button from "../../components/Button";
 
@@ -13,8 +13,8 @@ export default function OurServices() {
     setHoverPackage(false);
   };
   return (
-    <div className="flex flex-col items-center justify-center bg-gradient-to-b from-transparent from-[1%] via-[#E5FEF9] via-40% to-transparent to-[100%] backdrop-blur-xl px-32 mt-10 py-32">
-      <div className="grid grid-cols-2 gap-10 ">
+    <div className="flex flex-col items-center justify-center bg-neutralColor  px-32 mt-10 py-32">
+      <div className="grid grid-cols-2 gap-10">
         <div className="">
           <h1 className="text-6xl font-extralight font-serif italic">
             Our Services
