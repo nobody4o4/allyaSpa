@@ -1,5 +1,3 @@
-import React from "react";
-import billie from "../assets/asset 21.jpeg";
 import { FiStar } from "react-icons/fi";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import { BiLike } from "react-icons/bi";
@@ -41,7 +39,7 @@ export default function Reviews() {
       <GiBeveledStar className="absolute top-16  left-[36rem] rotate-[20deg] text-6xl opacity-25 text-white" />
       <LuMessageSquare className="absolute bottom-10  right-[10rem] rotate-[-20deg] translate-x-9 text-4xl opacity-25 text-white" />
       <GiBeveledStar className="absolute bottom-7 left-48 rotate-[20deg] text-4xl opacity-25 text-white" />
-      <FiAward className="absolute -bottom-3 left-[26rem] rotate-[20deg] -translate-x-24 -translate-y-2 text-5xl opacity-25 text-white" />
+      <FiAward className="absolute -bottom-3 left-[26rem] rotate-[20deg] text-5xl opacity-25 text-white" />
     </div>
   );
 }

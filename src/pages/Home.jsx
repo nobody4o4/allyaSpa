@@ -1,4 +1,3 @@
-import React from "react";
 import ReviewsMain from "../features/reviewsMain";
 import MainSlider from "../components/slider/mainSlider";
 import NavBar from "../components/NavBar";
