@@ -6,8 +6,11 @@ import Button from "./Button";
 
 function Gallery() {
   return (
-    <div className="flex flex-col h-[900 px]  mx-32">
-      <p>Our Gallery</p>
+    <div className="flex flex-col h-[900 px]  mx-32 my-10">
+      <div className="flex items-center justify-center mb-8">
+      <p className="text-5xl font-bold">Our Gallery</p>
+
+      </div>
 
       <div>
         <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">

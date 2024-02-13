@@ -1,18 +1,22 @@
-import ReviewsMain from "../features/reviewsMain";
-import MainSlider from "../components/slider/mainSlider";
-import NavBar from "../components/NavBar";
+import Booking from "../components/Booking";
 import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
-import Booking from "../components/Booking";
+import NavBar from "../components/NavBar";
+import MainSlider from "../components/slider/mainSlider";
+import AboutUs from "../features/home/aboutUs";
+import OurServices from "../features/home/ourServices";
+import ReviewsMain from "../features/home/reviewsMain";
 
 export default function Home() {
   return (
     <div className="">
       <NavBar />
-      <ReviewsMain />
-      <MainSlider />
+      <AboutUs />
+      <OurServices />
       <Booking />
       <Gallery />
+      <MainSlider />
+      <ReviewsMain />
       <Footer />
     </div>
   );

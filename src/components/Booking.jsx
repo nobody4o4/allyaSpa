@@ -2,7 +2,9 @@ import Button from "./Button";
 
 function Booking() {
   return (
-    <div className="px-4 py-4 bg-white mx-32  max-md:px-5">
+    <div className="flex justify-center">
+
+    <div className="px-4 py-4 bg-white mx-32  max-md:px-5 border-2 rounded-2xl shadow-md">
       <header className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
         <div className="flex flex-col  max-md:ml-0 max-md:w-full">
           <div className="flex flex-col grow max-md:mt-10 max-md:max-w-full">
@@ -16,10 +18,11 @@ function Booking() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col ml-5 w-[17%] max-md:ml-0 max-md:w-full">
+        <div className="flex flex-col ml-5 w-[17%] justify-center max-md:ml-0 max-md:w-full">
           <Button title="Book Now" />
         </div>
       </header>
+    </div>
     </div>
   );
 }
