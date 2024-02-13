@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import billie from "../assets/asset 21.jpeg";
-import { FiStar } from "react-icons/fi";
-import { ImQuotesLeft } from "react-icons/im";
-
-export default function Reviews() {
-  return (
-    <div className="rounded-r-md p-4 bg-cyan-300">
-      <div className="flex justify-between">
-        <p>Nishan Gurung</p>
-        <div className="gap-2 flex">
-          <FiStar />
-        </div>
-      </div>
-      <div>
-        <ImQuotesLeft />
-      </div>
-=======
 import React from "react";
 import billie from "../assets/asset 21.jpeg";
 import { FiStar } from "react-icons/fi";
@@ -27,7 +9,10 @@ import { LuMessageSquare } from "react-icons/lu";
 
 export default function Reviews() {
   return (
-    <div className="rounded-tr-3xl rounded-bl-3xl p-6 relative overflow-hidden" style={{background:'#24C9BF'}}>
+    <div
+      className="rounded-tr-3xl rounded-bl-3xl p-6 relative overflow-hidden"
+      style={{ background: "#24C9BF" }}
+    >
       <div className="flex justify-between text-white text-2xl px-4">
         <p className="not-italic">Nishan Gurung</p>
         <div className="gap-2 flex">
@@ -52,12 +37,11 @@ export default function Reviews() {
       <BiLike className="absolute bottom-5 left-6 rotate-[20deg] text-5xl opacity-25 text-white" />
       <FiAward className="absolute top-16 left-24 rotate-[-20deg] text-4xl opacity-25 text-white" />
       <GiBeveledStar className="absolute -top-4  left-56 rotate-[20deg] text-6xl opacity-25 text-white" />
-      <LuMessageSquare className="absolute top-16  left-[26rem] rotate-[20deg] text-2xl opacity-25 text-white"/>
+      <LuMessageSquare className="absolute top-16  left-[26rem] rotate-[20deg] text-2xl opacity-25 text-white" />
       <GiBeveledStar className="absolute top-16  left-[36rem] rotate-[20deg] text-6xl opacity-25 text-white" />
-      <LuMessageSquare className="absolute bottom-10  right-[10rem] rotate-[-20deg] text-4xl opacity-25 text-white"/>
+      <LuMessageSquare className="absolute bottom-10  right-[10rem] rotate-[-20deg] translate-x-9 text-4xl opacity-25 text-white" />
       <GiBeveledStar className="absolute bottom-7 left-48 rotate-[20deg] text-4xl opacity-25 text-white" />
-      <FiAward className="absolute -bottom-3 left-[26rem] rotate-[20deg] text-5xl opacity-25 text-white" />
->>>>>>> 2ca12e2b691f84fa02d759d690ed93902d793aaa
+      <FiAward className="absolute -bottom-3 left-[26rem] rotate-[20deg] -translate-x-24 -translate-y-2 text-5xl opacity-25 text-white" />
     </div>
   );
 }

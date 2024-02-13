@@ -99,7 +99,7 @@ function Footer() {
             </nav>
           </div>
         </div>
-        <div className="border-t">
+        <div className="border-t bg-black">
           <div className="mx-auto flex max-w-screen-xl flex-col gap-y-4 px-4 py-3 text-center text-gray-500 sm:px-20 lg:flex-row lg:justify-between lg:text-left xl:px-10">
             <p className="">© 2024 Allya | All Rights Reserved</p>
             <p className="-order-1 sm:order-none">

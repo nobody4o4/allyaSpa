@@ -5,7 +5,7 @@ function NavBar() {
   return (
     <>
       <div className="bg-[#24C9BF] h-[100pxa]">
-        <div className="flex justify-between mx-24">
+        <div className="flex justify-between mx-32">
           <img src={logo} alt="logo" className="max-w-[120px]" />
           <div className="flex gap-x-32 justify-between h-fit my-auto font-semibold text-xl tracking-wide">
             <button className="focus:border-b-2 focus:border-white">
