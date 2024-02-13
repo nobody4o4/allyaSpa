@@ -1,26 +1,19 @@
-<<<<<<< HEAD
-import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
-import ReviewsMain from "../features/reviewsMain";
-
-export default function Home() {
-  return (
-    <div className="">
-      <NavBar />
-      <ReviewsMain />
-      <Footer />
-=======
 import React from 'react'
 import ReviewsMain from '../features/reviewsMain'
 import MainSlider from '../components/slider/mainSlider'
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
+import OurServices from '../features/ourServices';
 
 export default function Home() {
   return (
     <div className=''>
+      <NavBar />
+      <div className=' ml-40 mr-40'>
+        <OurServices />
+      </div>
         <ReviewsMain />
-        <MainSlider />
-
->>>>>>> 2ca12e2b691f84fa02d759d690ed93902d793aaa
+    <Footer />
     </div>
   );
 }

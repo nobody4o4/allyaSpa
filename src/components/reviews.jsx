@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import billie from "../assets/asset 21.jpeg";
-import { FiStar } from "react-icons/fi";
-import { ImQuotesLeft } from "react-icons/im";
-
-export default function Reviews() {
-  return (
-    <div className="rounded-r-md p-4 bg-cyan-300">
-      <div className="flex justify-between">
-        <p>Nishan Gurung</p>
-        <div className="gap-2 flex">
-          <FiStar />
-        </div>
-      </div>
-      <div>
-        <ImQuotesLeft />
-      </div>
-=======
 import React from "react";
 import billie from "../assets/asset 21.jpeg";
 import { FiStar } from "react-icons/fi";
@@ -57,7 +39,6 @@ export default function Reviews() {
       <LuMessageSquare className="absolute bottom-10  right-[10rem] rotate-[-20deg] text-4xl opacity-25 text-white"/>
       <GiBeveledStar className="absolute bottom-7 left-48 rotate-[20deg] text-4xl opacity-25 text-white" />
       <FiAward className="absolute -bottom-3 left-[26rem] rotate-[20deg] text-5xl opacity-25 text-white" />
->>>>>>> 2ca12e2b691f84fa02d759d690ed93902d793aaa
     </div>
   );
 }
