@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import bill from "../assets/bill.png";
+import { useState } from "react";
+import bill from "../../assets/bill.png";
+import Button from "../../components/Button";
 
 //TODO: Need to break into several components
 export default function OurServices() {
@@ -12,8 +13,8 @@ export default function OurServices() {
     setHoverPackage(false);
   };
   return (
-    <div className="flex items-center justify-center my-20">
-      <div className="grid grid-cols-2 gap-10">
+    <div className="flex flex-col items-center justify-center bg-gradient-to-b from-transparent from-[1%] via-[#E5FEF9] via-40% to-transparent to-[100%] backdrop-blur-xl px-32 mt-10 py-32">
+      <div className="grid grid-cols-2 gap-10 ">
         <div className="">
           <h1 className="text-6xl font-extralight font-serif italic">
             Our Services
@@ -31,19 +32,23 @@ export default function OurServices() {
             </p>
           </div>
           <div
-            className="h-[28rem] relative cursor-pointer overflow-hidden "
+            className="h-[471px] relative cursor-pointer overflow-hidden rounded "
             onMouseEnter={handleHoverPackage}
             onMouseLeave={handleHoverLeave}
           >
             <img
               src={bill}
-              className={`w-full h-full  ${hoverPackage
-                      ? "scale-100 ease-in duration-1000 "
-                      : "scale-105 ease-out duration-1000 " } `}
+              className={`w-full h-full rounded  ${
+                hoverPackage
+                  ? "scale-100 ease-in duration-1000 "
+                  : "scale-105 ease-out duration-1000 "
+              } `}
             ></img>
             {hoverPackage ? (
               <div className="inset-0 absolute group hover:bg-black hover:bg-opacity-25 ease-in duration-500">
-                <div className={`absolute bottom-8 right-10 text-5xl  opacity-0 group-hover:opacity-100  ease-in duration-700   flex flex-col justify-end items-end`}>
+                <div
+                  className={`absolute bottom-8 right-10 text-5xl  opacity-0 group-hover:opacity-100  ease-in duration-700   flex flex-col justify-end items-end`}
+                >
                   <h1 className="italic text-cyan-200 font-serif font-extralight">
                     Spa Package
                   </h1>
@@ -73,26 +78,38 @@ export default function OurServices() {
           </div>
         </div>
         <div className="flex flex-col gap-7">
-          <div className=" h-[14rem] relative ">
-            <img src={bill} className="w-full h-full object-cover"></img>
+          <div className=" h-[14rem] relative rounded">
+            <img
+              src={bill}
+              className="w-full h-full object-cover rounded"
+            ></img>
             <p className="absolute bottom-8 right-10 text-5xl font-serif font-extralight italic text-white">
               Massage
             </p>
           </div>
-          <div className=" h-[14rem] relative">
-            <img src={bill} className="w-full h-full object-cover"></img>
+          <div className=" h-[14rem] relative rounded">
+            <img
+              src={bill}
+              className="w-full h-full object-cover rounded"
+            ></img>
             <p className="absolute bottom-8 right-10 text-5xl font-serif font-extralight italic text-white">
               Steam Room
             </p>
           </div>
-          <div className=" h-[14rem] relative">
-            <img src={bill} className="w-full h-full object-cover"></img>
+          <div className=" h-[14rem] relative rounded">
+            <img
+              src={bill}
+              className="w-full h-full object-cover rounded"
+            ></img>
             <p className="absolute bottom-8 right-10 text-5xl font-serif font-extralight italic text-white">
               {" "}
               Facials
             </p>
           </div>
         </div>
+      </div>
+      <div className="flex mt-4  w-full justify-center ">
+        <Button title={"More Services"} />
       </div>
     </div>
   );
