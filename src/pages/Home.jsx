@@ -42,7 +42,6 @@ export default function Home() {
         <Gallery />
         <MainSlider />
         <ReviewsMain />
-        <Footer />
       </div>
     </div>
   );
