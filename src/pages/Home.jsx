@@ -8,6 +8,7 @@ import MainSlider from "../components/slider/mainSlider";
 import AboutUs from "../features/home/aboutUs";
 import OurServices from "../features/home/ourServices";
 import ReviewsMain from "../features/home/reviewsMain";
+import Location from "../components/Location";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,6 +43,7 @@ export default function Home() {
         <Gallery />
         <MainSlider />
         <ReviewsMain />
+        <Location />
         <Footer />
       </div>
     </div>
