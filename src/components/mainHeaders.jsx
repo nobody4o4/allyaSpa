@@ -1,4 +1,3 @@
-import React from "react";
 import billie from "../assets/bill.png";
 import allya from "../assets/Logo.png";
 

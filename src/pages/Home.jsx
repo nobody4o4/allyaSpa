@@ -38,7 +38,6 @@ export default function Home() {
         <NavBar />
         <AboutUs />
         <OurServices />
-        <Booking />
         <Gallery />
         <MainSlider />
         <ReviewsMain />

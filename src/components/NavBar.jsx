@@ -35,7 +35,7 @@ function NavBar() {
               <div className="text-xl italic font-bold text-emerald-50">
                 Feel free to call us on
               </div>
-              <div className="flex gap-x-2 text-lg font-semibold text-black">
+              <div className="flex gap-x-2 text-lg font-semibold text-black items-center">
                 <FaPhoneAlt className=" aspect-square" />
                 <p>+123-12345678</p>
               </div>

@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import bill from "../../assets/bill.png";
 import Button from "../../components/Button";
+import Booking from "../../components/Booking";
 
 //TODO: Need to break into several components
 export default function OurServices() {
@@ -13,7 +14,7 @@ export default function OurServices() {
     setHoverPackage(false);
   };
   return (
-    <div className="flex flex-col items-center justify-center bg-neutralColor  px-32 mt-10 py-32">
+    <div className="flex flex-col items-center justify-center bg-neutralColor  px-32 mt-10 py-32 relative ">
       <div className="grid grid-cols-2 gap-10">
         <div className="">
           <h1 className="text-6xl font-extralight font-serif italic">
@@ -111,6 +112,11 @@ export default function OurServices() {
       <div className="flex mt-4  w-full justify-center ">
         <Button title={"More Services"} />
       </div>
+      <div className="absolute -bottom-20">
+        <Booking />
+
+      </div>
+
     </div>
   );
 }
