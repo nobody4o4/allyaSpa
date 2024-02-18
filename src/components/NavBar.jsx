@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import logo from "../assets/Logo.png";
 import { FaPhoneAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,25 +32,32 @@ function NavBar() {
     <div
       className={` h-[100pxa] fixed w-full z-40 top-0  ${
         path == "/"
-          ? (isScrolled
+          ? isScrolled
             ? "bg-[#24C9BF] bg-opacity-100 ease-in duration-300"
-            : "bg-opacity-0 ease-out duration-300")
+            : "bg-opacity-0 ease-out duration-300"
           : "bg-[#24C9BF] "
       }`}
     >
       <div className="flex justify-between mx-32">
         <img src={logo} alt="logo" className="max-w-[120px]" />
         <div className="flex gap-x-32 justify-between h-fit my-auto font-semibold text-xl tracking-wide">
-          <button className="focus:border-b-2 focus:border-white">Home</button>
-          <button className="focus:border-b-2 focus:border-white">
+          <Link to={"/"} className="focus:border-b-2 focus:border-white">
+            Home
+          </Link>
+          <Link
+            to={"/about-us"}
+            className="focus:border-b-2 focus:border-white"
+          >
             About Us
-          </button>
-          <button className="focus:border-b-2 focus:border-white">
+          </Link>
+          <Link
+            to={"/services"}
+            className="focus:border-b-2 focus:border-white"
+          >
+            {" "}
             Services
-          </button>
-          <button className="focus:border-b-2 focus:border-white">
-            Gallery
-          </button>
+          </Link>
+          <Link className="focus:border-b-2 focus:border-white">Gallery</Link>
         </div>
         <div className="flex gap-x-4">
           <button
@@ -58,10 +66,6 @@ function NavBar() {
           >
             Book Appointment
           </button>
-          {/* <div>
-              <p>Feel to call us on</p>
-              <p>+123 12345678</p>
-            </div> */}
           <div className="flex flex-col flex-1 justify-center  my-auto border-l-2 border-white pl-4 py-3">
             <div className="text-xl italic font-bold text-emerald-50">
               Feel free to call us on
