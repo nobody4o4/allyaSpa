@@ -1,4 +1,3 @@
-import React from "react";
 import MainSlider from "../../components/slider/mainSlider";
 import Reviews from "../../components/reviews";
 
