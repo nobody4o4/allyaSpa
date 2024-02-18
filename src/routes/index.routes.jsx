@@ -5,12 +5,10 @@ import NavBar from "../components/NavBar.jsx";
 import Footer from "../components/Footer.jsx";
 
 export default function MainRoute() {
-  const path = location.pathname;
 
   return (
     <BrowserRouter>
-      {path != "/" && <NavBar />}
-
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/specificService" element={<SpecificService />} />
