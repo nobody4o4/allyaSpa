@@ -1,5 +1,5 @@
 import React from 'react'
-import EachServices from '../features/services/eachServices'
+import EachServices from './eachServices'
 
 export default function MainServices() {
   return (

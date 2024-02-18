@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 //Pages
 const Home = lazy(() => import("../pages/Home.jsx"));
 const SpecificService = lazy(() => import("../pages/specificService.jsx"));
-const EachServices = lazy(() => import("../features/services/eachServices.jsx")
+const EachServices = lazy(() => import("../pages/eachServices.jsx")
 );
 //Components
 import NavBar from "../components/NavBar.jsx";
