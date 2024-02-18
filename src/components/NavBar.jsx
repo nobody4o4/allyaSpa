@@ -24,18 +24,14 @@ function NavBar() {
     };
   }, [path]);
 
-  console.log(isScrolled);
-
-  console.log(path);
-
   return (
     <div
-      className={` h-[100pxa] fixed w-full z-40 top-0  ${
+      className={` h-[100pxa]  w-full z-40 top-0  ${
         path == "/"
           ? isScrolled
-            ? "bg-[#24C9BF] bg-opacity-100 ease-in duration-300"
-            : "bg-opacity-0 ease-out duration-300"
-          : "bg-[#24C9BF] "
+            ? "bg-[#24C9BF] bg-opacity-100 ease-in duration-300 fixed"
+            : "bg-opacity-0 ease-out duration-300 fixed"
+          : "bg-[#24C9BF] sticky"
       }`}
     >
       <div className="flex justify-between mx-32">

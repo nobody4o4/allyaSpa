@@ -39,14 +39,8 @@ export default function MainGallery() {
   return (
     <div className=" ">
       <div className="flex gap-4 h-full">
-        <div className="w-[30rem] h-[40rem] overflow-hidden">
-        <img
-            className="h-full w-full object-cover transition-transform duration-500 transform hover:scale-105"
-            src={mainImage}
-            alt="Main Image"
-          />        </div>
         <div className="flex flex-col gap-2  w-fit">
-          {images.slice(0,5)?.map((image) => (
+          {images.slice(0, 5)?.map((image) => (
             <div
               key={image.image_id}
               className="h-[122px] cursor-pointer  w-[10rem]"
@@ -59,6 +53,13 @@ export default function MainGallery() {
               ></img>
             </div>
           ))}
+        </div>
+        <div className="w-[30rem] h-[40rem] overflow-hidden">
+          <img
+            className="h-full w-full object-cover transition-transform duration-500 transform hover:scale-105"
+            src={mainImage}
+            alt="Main Image"
+          />
         </div>
       </div>
     </div>
