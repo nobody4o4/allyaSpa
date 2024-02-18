@@ -1,9 +1,42 @@
+import { useEffect, useState } from "react";
 import logo from "../assets/Logo.png";
 import { FaPhoneAlt } from "react-icons/fa";
 
 function NavBar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const path = location.pathname;
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+
+    if (offset > 600) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [path]);
+
+  console.log(isScrolled);
+
+  console.log(path);
+
   return (
-    <div className="bg-[#24C9BF] h-[100pxa] z-40 sticky top-0 ">
+    <div
+      className={` h-[100pxa] fixed w-full z-40 top-0  ${
+        path == "/"
+          ? (isScrolled
+            ? "bg-[#24C9BF] bg-opacity-100 ease-in duration-300"
+            : "bg-opacity-0 ease-out duration-300")
+          : "bg-[#24C9BF] "
+      }`}
+    >
       <div className="flex justify-between mx-32">
         <img src={logo} alt="logo" className="max-w-[120px]" />
         <div className="flex gap-x-32 justify-between h-fit my-auto font-semibold text-xl tracking-wide">
@@ -33,7 +66,7 @@ function NavBar() {
             <div className="text-xl italic font-bold text-emerald-50">
               Feel free to call us on
             </div>
-            <div className="flex gap-x-2 text-lg font-semibold text-black">
+            <div className="flex gap-x-2 text-lg font-semibold text-black items-center">
               <FaPhoneAlt className=" aspect-square" />
               <p>+123-12345678</p>
             </div>

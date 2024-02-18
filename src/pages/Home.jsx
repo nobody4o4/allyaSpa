@@ -11,41 +11,15 @@ import ReviewsMain from "../features/home/reviewsMain";
 import Location from "../components/Location";
 
 export default function Home() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  const handleScroll = () => {
-    const offset = window.scrollY;
-
-    if (offset > 700) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  console.log(isScrolled);
-
   return (
     <div className="">
       <MainHeaders />
-      <div>
-        <NavBar />
-        <AboutUs />
-        <OurServices />
-        <Booking />
-        <Gallery />
-        <MainSlider />
-        <ReviewsMain />
-        <Location />
-        <Footer />
-      </div>
+      <AboutUs />
+      <OurServices />
+      <Gallery />
+      <MainSlider />
+      <ReviewsMain />
+      <Location />
     </div>
   );
 }

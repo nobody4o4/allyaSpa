@@ -6,12 +6,10 @@ import Footer from "../components/Footer.jsx";
 import BookAppointment from "../components/BookAppointment.jsx";
 
 export default function MainRoute() {
-  const path = location.pathname;
 
   return (
     <BrowserRouter>
-      {path != "/" && <NavBar />}
-
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/specificService" element={<SpecificService />} />
