@@ -1,6 +1,6 @@
 function TitleServiceCategory() {
   return (
-    <div className="flex flex-col gap-y-6 items-center w-[70%] mx-auto">
+    <div className="flex flex-col gap-y-6 items-center w-[70%] mx-auto ">
       <h1 className="text-5xl font-bold">Our Services</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

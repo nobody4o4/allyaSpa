@@ -1,5 +1,5 @@
-import hero from "../../assets/wall.jpg";
-import ServicesTypes from "./servicesTypes";
+import hero from "../assets/wall.jpg";
+import ServicesTypes from "../features/services/servicesTypes";
 
 export default function EachServices() {
   return (
@@ -23,7 +23,6 @@ export default function EachServices() {
         <ServicesTypes />
         <ServicesTypes />
         <ServicesTypes />
-
       </div>
     </div>
   );
