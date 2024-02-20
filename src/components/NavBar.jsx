@@ -27,7 +27,7 @@ function NavBar() {
   return (
     <div
       className={` h-[100pxa]  w-full z-40 top-0  ${
-        path == "/"
+        path == "/" || path == '/services' || path == "/gallery"
           ? isScrolled
             ? "bg-[#24C9BF] bg-opacity-100 ease-in duration-300 fixed"
             : "bg-opacity-0 ease-out duration-300 fixed"
@@ -53,7 +53,7 @@ function NavBar() {
             {" "}
             Services
           </Link>
-          <Link className="focus:border-b-2 focus:border-white">Gallery</Link>
+          <Link to={'/gallery'} className="focus:border-b-2 focus:border-white">Gallery</Link>
         </div>
         <div className="flex gap-x-4">
           <button

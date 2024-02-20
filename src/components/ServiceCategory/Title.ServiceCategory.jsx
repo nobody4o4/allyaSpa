@@ -1,12 +1,13 @@
+import bill from "../../assets/bill.png"
+
+
 function TitleServiceCategory() {
   return (
-    <div className="flex flex-col gap-y-6 items-center w-[70%] mx-auto ">
-      <h1 className="text-5xl font-bold">Our Services</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Sollicitudin tempor
-        id eu nisl nunc mi ipsum. Risus quis varius quam quisque id.
-      </p>
+    <div className="flex flex-col items-center relative ">
+      <img src={bill} alt="gege" className="flex flex-col items-center w-full justify-center h-[25rem] object-cover "></img>
+      <div className="absolute flex justify-center top-44">
+      <h1 className="text-5xl font-bold text-white ">Our Services</h1>
+      </div>
     </div>
   );
 }
