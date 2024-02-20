@@ -1,4 +1,4 @@
-import hero from "../../assets/wall.jpg";
+import hero from "../assets/wall.jpg";
 import ServicesTypes from "../features/services/servicesTypes";
 
 export default function EachServices() {

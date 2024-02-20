@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Booking from "../components/Booking";
 import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
