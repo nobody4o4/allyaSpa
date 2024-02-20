@@ -2,10 +2,11 @@ import bill from "../assets/bill.png";
 
 export default function GalleryMain() {
   return (
-    <di className="flex flex-col">
-      <div className="flex flex-col gap-y-6 items-center w-full mx-auto justify-center h-[25rem] object-cover" style={{backgroundImage: `url(${bill})`}}>
+    <div className="flex flex-col relative">
+      <img src={bill} alt="gege" className="flex flex-col items-center w-full justify-center h-[25rem] object-cover "></img>
+      <div className="absolute flex justify-center w-full top-44 ">
       <h1 className="text-5xl font-bold text-white">Our Gallery</h1>
-    </div>
+      </div>
       <div className="py-6 px-32  dark:text-gray-50">
         <div className=" grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
           <img
@@ -60,6 +61,6 @@ export default function GalleryMain() {
           />
         </div>
       </div>
-    </di>
+    </div>
   );
 }

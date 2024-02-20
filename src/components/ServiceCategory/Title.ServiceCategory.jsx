@@ -3,8 +3,11 @@ import bill from "../../assets/bill.png"
 
 function TitleServiceCategory() {
   return (
-    <div className="flex flex-col gap-y-6 items-center w-full mx-auto justify-center h-[25rem] object-cover" style={{backgroundImage: `url(${bill})`}}>
-      <h1 className="text-5xl font-bold text-white">Our Services</h1>
+    <div className="flex flex-col items-center relative ">
+      <img src={bill} alt="gege" className="flex flex-col items-center w-full justify-center h-[25rem] object-cover "></img>
+      <div className="absolute flex justify-center top-44">
+      <h1 className="text-5xl font-bold text-white ">Our Services</h1>
+      </div>
     </div>
   );
 }

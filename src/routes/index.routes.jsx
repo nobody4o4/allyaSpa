@@ -8,10 +8,10 @@ const EachServices = lazy(() => import("../pages/eachServices.jsx"));
 //Components
 import NavBar from "../components/NavBar.jsx";
 import Footer from "../components/Footer.jsx";
-import BookAppointment from "../components/BookAppointment.jsx";
 import ServiceCategory from "../pages/ServiceCategory.jsx";
 import AboutUs from "../pages/AboutUs.jsx";
 import GalleryMain from "../pages/galleryMain.jsx";
+import BookAppointment from "../pages/BookAppointment.jsx";
 
 export default function MainRoute() {
   return (

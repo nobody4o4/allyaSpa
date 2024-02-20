@@ -23,7 +23,6 @@ export default function EachServices() {
         <ServicesTypes />
         <ServicesTypes />
         <ServicesTypes />
-
       </div>
     </div>
   );
