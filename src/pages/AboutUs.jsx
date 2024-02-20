@@ -1,4 +1,10 @@
+import Features from "../components/AboutUs/Feature.AboutUs";
+
 function AboutUs() {
-  return <div>AboutUs</div>;
+  return (
+    <div>
+      <Features />
+    </div>
+  );
 }
 export default AboutUs;
