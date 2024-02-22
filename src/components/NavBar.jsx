@@ -57,16 +57,22 @@ function NavBar() {
           <Link to={"/gallery"} className="focus:border-b-2 focus:border-white">
             Gallery
           </Link>
+          <Link
+            to={"/contact-us"}
+            className="focus:border-b-2 focus:border-white"
+          >
+            Contact us
+          </Link>
         </div>
-        <div className="flex gap-x-4 ">
+        <div className="flex gap-x-4">
           <button
-            className=" my-auto  justify-center border-2 border-solid border-white p-2 text-xl font-semibold text-emerald-50 transition-all duration-300 ease-in hover:bg-white hover:text-primaryColor"
+            className=" my-auto  justify-center border-2 border-solid border-white px-4 py-2 text-xl font-semibold text-emerald-50"
             aria-label="Book Appointment"
           >
             Book Appointment
           </button>
-          <div className="my-auto flex w-full flex-1 flex-col  justify-center border-l-2 border-white py-3 pl-4">
-            <div className="text-xl font-medium text-emerald-50">
+          <div className="my-auto flex flex-1 flex-col  justify-center border-l-2 border-white py-3 pl-4">
+            <div className="text-xl font-bold italic text-emerald-50">
               Feel free to call us on
             </div>
             <div className="flex items-center gap-x-2 text-lg font-semibold text-black">
