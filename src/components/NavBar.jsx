@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import logo from "../assets/Logo.png";
 import { FaPhoneAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation(); // Use useLocation hook to get current location
   const path = location.pathname;
 
   const handleScroll = () => {
@@ -34,9 +35,9 @@ function NavBar() {
           : "bg-[#24C9BF] sticky"
       }`}
     >
-      <div className="flex justify-between mx-32">
+      <div className="flex justify-between mx-[80px]">
         <img src={logo} alt="logo" className="max-w-[120px]" />
-        <div className="flex gap-x-32 justify-between h-fit my-auto font-semibold text-xl tracking-wide">
+        <div className="flex gap-x-20 justify-between h-fit my-auto font-semibold text-[22px] tracking-wide">
           <Link to={"/"} className="focus:border-b-2 focus:border-white">
             Home
           </Link>
@@ -54,10 +55,12 @@ function NavBar() {
             Services
           </Link>
           <Link to={'/gallery'} className="focus:border-b-2 focus:border-white">Gallery</Link>
+          {/* <Link to={'/contact-us'} className="focus:border-b-2 focus:border-white">Contact us</Link> */}
+
         </div>
         <div className="flex gap-x-4">
           <button
-            className=" justify-center  p-2 my-auto text-xl font-semibold text-emerald-50 border-2 border-solid border-white"
+            className=" justify-center  py-2 px-4 my-auto text-xl font-semibold text-emerald-50 border-2 border-solid border-white"
             aria-label="Book Appointment"
           >
             Book Appointment
