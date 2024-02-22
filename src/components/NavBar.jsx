@@ -28,16 +28,16 @@ function NavBar() {
   return (
     <div
       className={` h-[100pxa]  w-full z-40 top-0  ${
-        path == "/" || path == '/services' || path == "/gallery"
+        path == "/" || path == "/services" || path == "/gallery"
           ? isScrolled
-            ? "bg-[#24C9BF] bg-opacity-100 ease-in duration-300 fixed"
-            : "bg-opacity-0 ease-out duration-300 fixed"
+            ? "bg-gradient-to-b from-primaryColor from-60% to-slate-200  backdrop-blur-xl ease-in duration-300 sticky"
+            : "bg-gradient-to-b from-primaryColor to-slate-100 backdrop-blur-lg  ease-out duration-300 sticky"
           : "bg-[#24C9BF] sticky"
       }`}
     >
-      <div className="flex justify-between mx-[80px]">
+      <div className="flex justify-between mx-32 gap-x-4">
         <img src={logo} alt="logo" className="max-w-[120px]" />
-        <div className="flex gap-x-20 justify-between h-fit my-auto font-semibold text-[22px] tracking-wide">
+        <div className="flex gap-x-16  h-fit my-auto font-semibold text-xl tracking-wide">
           <Link to={"/"} className="focus:border-b-2 focus:border-white">
             Home
           </Link>
@@ -54,19 +54,19 @@ function NavBar() {
             {" "}
             Services
           </Link>
-          <Link to={'/gallery'} className="focus:border-b-2 focus:border-white">Gallery</Link>
-          {/* <Link to={'/contact-us'} className="focus:border-b-2 focus:border-white">Contact us</Link> */}
-
+          <Link to={"/gallery"} className="focus:border-b-2 focus:border-white">
+            Gallery
+          </Link>
         </div>
-        <div className="flex gap-x-4">
+        <div className="flex gap-x-4 ">
           <button
-            className=" justify-center  py-2 px-4 my-auto text-xl font-semibold text-emerald-50 border-2 border-solid border-white"
+            className=" justify-center  p-2 my-auto text-xl font-semibold text-emerald-50 border-2 border-solid border-white hover:bg-white hover:text-primaryColor transition-all ease-in duration-300"
             aria-label="Book Appointment"
           >
             Book Appointment
           </button>
-          <div className="flex flex-col flex-1 justify-center  my-auto border-l-2 border-white pl-4 py-3">
-            <div className="text-xl italic font-bold text-emerald-50">
+          <div className="flex flex-col flex-1 w-full justify-center  my-auto border-l-2 border-white pl-4 py-3">
+            <div className="text-xl font-medium text-emerald-50">
               Feel free to call us on
             </div>
             <div className="flex gap-x-2 text-lg font-semibold text-black items-center">

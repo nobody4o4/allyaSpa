@@ -9,6 +9,7 @@ function FormBookAppointment() {
     {
       startDate: new Date(),
       endDate: new Date(),
+
       key: "selection",
     },
   ]);
@@ -103,7 +104,7 @@ function FormBookAppointment() {
                   id="phoneNumber"
                   name="phoneNumber"
                   placeholder="98XXXXXXX"
-                  className="block w-full rounded-md border border-gray-200 py-3 px-4 pr-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+                  className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none block w-full rounded-md border border-gray-200 py-3 px-4 pr-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
                 />
                 <ErrorMessage
                   name="phoneNumber"

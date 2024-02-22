@@ -6,7 +6,6 @@ function BookAppointment() {
     <div className="relative mx-auto w-full bg-white p-8">
       <div className="grid min-h-screen grid-cols-10">
         <FormBookAppointment />
-
         <SelectService />
       </div>
     </div>

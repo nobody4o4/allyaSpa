@@ -19,6 +19,14 @@ function ServiceCard() {
           </div>
         </div>
         <p className="text-sm font-semibold text-white">$260.00</p>
+        <button className="group hover:bg-white border border-white  hover:border hover:border-teal-300  hover:  flex cursor-pointer select-none items-center justify-center rounded-md bg-teal-300 px-1 text-white transition">
+          <a
+            href="#"
+            className="group  group-hover:text-teal-300 flex w-full items-center justify-center rounded py-1 text-center font-light"
+          >
+            Select
+          </a>
+        </button>
       </label>
     </div>
   );
