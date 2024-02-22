@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import logo from "../assets/Logo.png";
 import { FaPhoneAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation(); // Use useLocation hook to get current location
   const path = location.pathname;
 
   const handleScroll = () => {
