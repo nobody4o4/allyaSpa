@@ -10,6 +10,8 @@ const ServiceCategory = lazy(()=> import("../pages/ServiceCategory.jsx"))
 const AboutUs = lazy(()=> import("../pages/AboutUs.jsx"))
 const GalleryMain = lazy(()=>import("../pages/galleryMain.jsx"))
 const BookAppointment = lazy(()=>import("../pages/BookAppointment.jsx"))
+const Faq = lazy(()=> import("../pages/faq.jsx"))
+
 //Components
 import NavBar from "../components/NavBar.jsx";
 import Footer from "../components/Footer.jsx";
@@ -28,6 +30,7 @@ export default function MainRoute() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/each-service" element={<EachServices />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/faq" element={<Faq />} />
           <Route path="*" element={<p>no page </p>} />
         </Routes>
       </Suspense>
