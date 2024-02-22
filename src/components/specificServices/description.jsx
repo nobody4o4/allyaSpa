@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Description() {
   return (
     <div className=" mx-48">
@@ -20,8 +18,10 @@ export default function Description() {
         </p>
       </div>
       <div className="mt-4">
-        <h1 className="font-bold text-xl">Health benefits of Swedish massage</h1>
-        <ol className=" text-sm list-decimal pl-5">
+        <h1 className="text-xl font-bold">
+          Health benefits of Swedish massage
+        </h1>
+        <ol className=" list-decimal pl-5 text-sm">
           <li>Helps reduce stress</li>
           <li>Helps reduce muscle tension </li>{" "}
           <li>Helps with pain management </li>{" "}

@@ -13,10 +13,7 @@ const BookAppointment = lazy(() => import("../pages/BookAppointment.jsx"));
 //Components
 import NavBar from "../components/NavBar.jsx";
 import Footer from "../components/Footer.jsx";
-import ServiceCategory from "../pages/ServiceCategory.jsx";
-import AboutUs from "../pages/AboutUs.jsx";
-import GalleryMain from "../pages/galleryMain.jsx";
-import BookAppointment from "../pages/BookAppointment.jsx";
+
 import LoadingScreen from "../pages/LoadingScreen.jsx";
 
 export default function MainRoute() {

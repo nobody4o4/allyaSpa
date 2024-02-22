@@ -27,17 +27,17 @@ function NavBar() {
 
   return (
     <div
-      className={` h-[100pxa]  w-full z-40 top-0  ${
+      className={` top-0  z-40 h-[100pxa] w-full  ${
         path == "/" || path == "/services" || path == "/gallery"
           ? isScrolled
-            ? "bg-gradient-to-b from-primaryColor from-60% to-slate-200  backdrop-blur-xl ease-in duration-300 sticky"
-            : "bg-gradient-to-b from-primaryColor to-slate-100 backdrop-blur-lg  ease-out duration-300 sticky"
-          : "bg-[#24C9BF] sticky"
+            ? "b  fixed bg-primaryColor duration-300 ease-in"
+            : "backdrop-blur-lsg fixed bg-gradient-to-b from-primaryColor   to-transparent"
+          : "fixed bg-primaryColor duration-700 ease-out"
       }`}
     >
-      <div className="flex justify-between mx-32 gap-x-4">
+      <div className="mx-32 flex justify-between gap-x-4">
         <img src={logo} alt="logo" className="max-w-[120px]" />
-        <div className="flex gap-x-16  h-fit my-auto font-semibold text-xl tracking-wide">
+        <div className="my-auto flex  h-fit gap-x-16 text-xl font-semibold tracking-wide">
           <Link to={"/"} className="focus:border-b-2 focus:border-white">
             Home
           </Link>
@@ -60,16 +60,16 @@ function NavBar() {
         </div>
         <div className="flex gap-x-4 ">
           <button
-            className=" justify-center  p-2 my-auto text-xl font-semibold text-emerald-50 border-2 border-solid border-white hover:bg-white hover:text-primaryColor transition-all ease-in duration-300"
+            className=" my-auto  justify-center border-2 border-solid border-white p-2 text-xl font-semibold text-emerald-50 transition-all duration-300 ease-in hover:bg-white hover:text-primaryColor"
             aria-label="Book Appointment"
           >
             Book Appointment
           </button>
-          <div className="flex flex-col flex-1 w-full justify-center  my-auto border-l-2 border-white pl-4 py-3">
+          <div className="my-auto flex w-full flex-1 flex-col  justify-center border-l-2 border-white py-3 pl-4">
             <div className="text-xl font-medium text-emerald-50">
               Feel free to call us on
             </div>
-            <div className="flex gap-x-2 text-lg font-semibold text-black items-center">
+            <div className="flex items-center gap-x-2 text-lg font-semibold text-black">
               <FaPhoneAlt className=" aspect-square" />
               <p>+123-12345678</p>
             </div>
