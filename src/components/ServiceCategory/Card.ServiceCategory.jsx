@@ -1,4 +1,5 @@
 import messageIMG from "../../assets/p10.jpg";
+
 function CardServiceCategory() {
   return (
     <div className="relative w-2/3 mx-auto h-72 flex -scale-[-1]">
