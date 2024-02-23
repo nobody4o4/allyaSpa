@@ -5,11 +5,11 @@ import { FaTwitter } from "react-icons/fa";
 function Footer() {
   return (
     <div>
-      <footer className="bg-[#24C9BF]">
-        <div className="mx-auto grid max-w-screen-xl gap-y-8 gap-x-12 px-4 py-10 sm:px-20 md:grid-cols-2 xl:grid-cols-4 xl:px-10">
-          <div className="mb-6 h-2/3 items-center space-x-2 max-w-sm">
-            <img className="h-2/3 object-center " src={logo} alt="" />
-            <div className="text-3xl flex justify-between w-2/3">
+      <footer className="items-center bg-primaryColor">
+        <div className="mx-auto grid max-w-screen-xl items-center gap-x-12 gap-y-8 px-4 py-10 sm:px-20 md:grid-cols-2  xl:grid-cols-4 xl:px-10">
+          <div className="mb-6 h-fit max-w-sm items-center space-x-2">
+            <img className="h-32 object-center" src={logo} alt="" />
+            <div className="flex w-2/3 justify-between text-3xl">
               <FaFacebook className="text-slate-950" />
               <FaInstagram className="text-slate-950" />
               <FaTwitter className="text-slate-950" />
@@ -17,10 +17,10 @@ function Footer() {
           </div>
 
           <div className="">
-            <div className="mt-4 mb-2 font-semibold text-xl xl:mb-4">
+            <div className="mb-2 mt-4 text-xl font-semibold xl:mb-4">
               Services
             </div>
-            <nav aria-label="Guides Navigation" className="text-slate-950">
+            <nav className="text-slate-950">
               <ul className="space-y-3">
                 <li>
                   <a className="hover:text-blue-600 hover:underline" href="#">
@@ -51,7 +51,7 @@ function Footer() {
             </nav>
           </div>
           <div className="">
-            <div className="mt-4 mb-2 font-semibold text-xl xl:mb-4">
+            <div className="mb-2 mt-4 text-xl font-semibold xl:mb-4">
               Customer Care
             </div>
             <nav aria-label="Footer Navigation" className="text-slate-950">
@@ -75,7 +75,7 @@ function Footer() {
             </nav>
           </div>
           <div className="">
-            <div className="mt-4 mb-2 font-semibold text-xl xl:mb-4">
+            <div className="mb-2 mt-4 text-xl font-semibold xl:mb-4">
               Customer Care
             </div>
             <nav aria-label="Footer Navigation" className="text-slate-950">

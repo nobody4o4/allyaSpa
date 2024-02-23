@@ -5,7 +5,8 @@ import { Link, useLocation } from "react-router-dom";
 
 function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation(); // Use useLocation hook to get current location
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
   const path = location.pathname;
 
   const handleScroll = () => {
@@ -26,67 +27,103 @@ function NavBar() {
   }, [path]);
 
   return (
-    <div
-      className={` top-0  z-40 h-[100pxa] w-full  ${
-        path == "/" ||
-        path == "/services" ||
-        path == "/gallery" ||
-        path == "/about-us" ||
-        path == "/contact-us"
-          ? isScrolled
-            ? "b  fixed bg-primaryColor duration-300 ease-in"
-            : "backdrop-blur-lsg fixed bg-gradient-to-b from-primaryColor to-transparent"
-          : "fixed bg-primaryColor duration-700 ease-out"
-      }`}
+    <header
+      className={` z-40 flex w-full flex-col justify-between overflow-hidden px-10 text-slate-700 lg:flex-row lg:items-center ${
+        isScrolled
+          ? "fixed bg-primaryColor duration-300 ease-in"
+          : "fixed bg-gradient-to-b from-primaryColor to-transparent backdrop-blur-lg"
+      }
+      ${isMenuOpen ? "h-auto pt-8" : "h-[100px]"}`}
     >
-      <div className="mx-32 flex justify-between gap-x-4">
-        <img src={logo} alt="logo" className="max-w-[120px]" />
-        <div className="my-auto flex  h-fit gap-x-16 text-xl font-semibold tracking-wide">
-          <Link to={"/"} className="focus:border-b-2 focus:border-white">
-            Home
-          </Link>
-          <Link
-            to={"/about-us"}
-            className="focus:border-b-2 focus:border-white"
+      <div className="flex w-full items-center justify-between lg:w-auto">
+        <Link to={"/"} className="flex items-center">
+          <img
+            src={logo}
+            alt="logo"
+            className="h-auto w-24 scale-125 overflow-x-hidden"
+          />
+        </Link>
+        <button
+          className="block focus:outline-none lg:hidden"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <svg
+            className="h-6 w-6 text-slate-700"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-            About Us
-          </Link>
-          <Link
-            to={"/services"}
-            className="focus:border-b-2 focus:border-white"
-          >
-            {" "}
-            Services
-          </Link>
-          <Link to={"/gallery"} className="focus:border-b-2 focus:border-white">
-            Gallery
-          </Link>
-          <Link
-            to={"/contact-us"}
-            className="focus:border-b-2 focus:border-white"
-          >
-            Contact us
-          </Link>
-        </div>
-        <div className="flex gap-x-4">
-          <button
-            className=" my-auto  justify-center border-2 border-solid border-white px-4 py-2 text-xl font-semibold text-emerald-50"
-            aria-label="Book Appointment"
-          >
-            Book Appointment
-          </button>
-          <div className="my-auto flex flex-1 flex-col  justify-center border-l-2 border-white py-3 pl-4">
-            <div className="text-xl font-bold italic text-emerald-50">
-              Feel free to call us on
-            </div>
-            <div className="flex items-center gap-x-2 text-lg font-semibold text-black">
-              <FaPhoneAlt className=" aspect-square" />
-              <p>+123-12345678</p>
-            </div>
-          </div>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d={
+                isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
+              }
+            />
+          </svg>
+        </button>
+      </div>
+      <nav
+        className={`${
+          isMenuOpen ? "block pb-4" : "hidden"
+        } lg:flex lg:flex-row lg:items-center`}
+      >
+        <ul className="flex flex-col items-center space-y-4 lg:flex-row lg:space-x-8 lg:space-y-0">
+          <li>
+            <Link
+              to={"/"}
+              className="text-2xl font-medium text-slate-700 hover:text-gray-900"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"/about-us"}
+              className="text-2xl font-medium text-slate-700 hover:text-gray-900"
+            >
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"/services"}
+              className="text-2xl font-medium text-slate-700 hover:text-gray-900"
+            >
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"/gallery"}
+              className="text-2xl font-medium text-slate-700 hover:text-gray-900"
+            >
+              Gallery
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"/contact-us"}
+              className="text-2xl font-medium text-slate-700 hover:text-gray-900"
+            >
+              Contact Us
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      <div className="flex items-center space-x-8">
+        <button className=" hidden rounded-md border-2 bg-primaryColor px-4 py-2 text-base font-medium text-white shadow-lg hover:bg-teal-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-800 lg:block">
+          Book Appointment
+        </button>
+        <div className="hidden items-center space-x-2 lg:flex ">
+          <FaPhoneAlt className="text-xl text-slate-700 " />
+          <span className="text-lg font-medium text-slate-700">
+            +123-12345678
+          </span>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
 
