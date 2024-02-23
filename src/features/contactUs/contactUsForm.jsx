@@ -51,7 +51,7 @@ export default function ContactUsForm() {
   // }
 
   return (
-    <form className="flex flex-col gap-6 px-16" onSubmit={handleSubmit}>
+    <form className="my-4 flex flex-col gap-6 px-16" onSubmit={handleSubmit}>
       <div className="flex  w-full gap-10 ">
         <div className="h-[6rem] flex-1">
           <label

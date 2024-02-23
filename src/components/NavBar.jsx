@@ -28,7 +28,7 @@ function NavBar() {
 
   return (
     <header
-      className={` z-40 flex w-full flex-col justify-between overflow-hidden px-10 text-slate-700 lg:flex-row lg:items-center ${
+      className={`lg:px-1a z-40 flex w-full flex-col justify-between overflow-hidden px-3 text-slate-700 sm:px-5 md:px-8 lg:flex-row lg:items-center ${
         isScrolled
           ? "fixed bg-primaryColor duration-300 ease-in"
           : "fixed bg-gradient-to-b from-primaryColor to-transparent backdrop-blur-lg"
@@ -69,7 +69,7 @@ function NavBar() {
           isMenuOpen ? "block pb-4" : "hidden"
         } lg:flex lg:flex-row lg:items-center`}
       >
-        <ul className="flex flex-col items-center space-y-4 lg:flex-row lg:space-x-8 lg:space-y-0">
+        <ul className="flex flex-col items-center space-y-4 text-lg md:space-x-4 lg:flex-row  lg:space-x-8 lg:space-y-0 lg:text-xl">
           <li>
             <Link
               to={"/"}
@@ -81,9 +81,9 @@ function NavBar() {
           <li>
             <Link
               to={"/about-us"}
-              className="text-2xl font-medium text-slate-700 hover:text-gray-900"
+              className="text-2xl  font-medium text-slate-700 hover:text-gray-900"
             >
-              About Us
+              About-Us
             </Link>
           </li>
           <li>
@@ -107,7 +107,7 @@ function NavBar() {
               to={"/contact-us"}
               className="text-2xl font-medium text-slate-700 hover:text-gray-900"
             >
-              Contact Us
+              Contact-Us
             </Link>
           </li>
         </ul>
@@ -116,7 +116,7 @@ function NavBar() {
         <button className=" hidden rounded-md border-2 bg-primaryColor px-4 py-2 text-base font-medium text-white shadow-lg hover:bg-teal-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-800 lg:block">
           Book Appointment
         </button>
-        <div className="hidden items-center space-x-2 lg:flex ">
+        <div className="2md:flex hidden w-fit items-center space-x-2  ">
           <FaPhoneAlt className="text-xl text-slate-700 " />
           <span className="text-lg font-medium text-slate-700">
             +123-12345678
