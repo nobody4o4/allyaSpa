@@ -14,7 +14,7 @@ export default function OurServices() {
     setHoverPackage(false);
   };
   return (
-    <div className="flex flex-col items-center justify-center bg-neutralColor  px-4 lg:px-32 mt-10 py-32 relative ">
+    <div className="flex flex-col items-center justify-center bg-neutralColor  px-4 lg:px-32 mt-10 py-24 relative ">
       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="">
           <h1 className=" text-5xl text-center lg:text-6xl font-semibold ">
@@ -33,7 +33,7 @@ export default function OurServices() {
             </p>
           </div>
           <div
-            className="h-[471px] relative cursor-pointer overflow-hidden rounded "
+            className="h-[420px] md:h-[460px] lg:h-[471px] relative cursor-pointer overflow-hidden rounded "
             onMouseEnter={handleHoverPackage}
             onMouseLeave={handleHoverLeave}
           >
@@ -48,13 +48,13 @@ export default function OurServices() {
             {hoverPackage ? (
               <div className="inset-0 absolute group hover:bg-black hover:bg-opacity-25 ease-in duration-500">
                 <div
-                  className={`absolute bottom-8 right-10 text-5xl  opacity-0 group-hover:opacity-100  ease-in duration-700   flex flex-col justify-end items-end`}
+                  className={`absolute bottom-8 right-2  md:right-5 lg:right-10 text-5xl  opacity-0 group-hover:opacity-100  ease-in duration-700   flex flex-col justify-end items-end`}
                 >
-                  <h1 className="italic text-cyan-200 font-serif font-extralight">
+                  <h1 className="italic text-3xl  lg:text-5xl text-cyan-200 font-serif font-extralight">
                     Spa Package
                   </h1>
-                  <div className=" text-sm text-white  flex flex-col justify-end items-end">
-                    <p>
+                  <div className=" text-xs lg:text-sm text-white  flex flex-col justify-end items-end">
+                    <p className="text-end">
                       These packages typically include a combination of
                       treatments such as:
                     </p>
@@ -64,7 +64,7 @@ export default function OurServices() {
                       <li>Body Scrubs</li>
                       <li>Manicures or Predicures</li>
                     </ul>
-                    <p>
+                    <p className="text-end">
                       Additionally, guests may have access to spa facilities
                       like saunas, steam rooms, or relaxation areas.
                     </p>
@@ -72,13 +72,13 @@ export default function OurServices() {
                 </div>
               </div>
             ) : (
-              <p className="absolute bottom-8 right-10 text-5xl font-serif font-extralight hover:opacity-15 ease-in duration-700 italic text-white">
+              <p className="absolute bottom-4 lg:bottom-8 right-5 lg:right-10 text-2xl lg:text-5xl font-serif font-extralight hover:opacity-15 ease-in duration-700 italic text-white">
                 Spa Package
               </p>
             )}
           </div>
         </div>
-        <div className="md:grid flex flex-wrap w-full border-2 justify-center md:grid-cols-3 lg:grid-cols-1 lg:flex-col gap-4 lg:gap-7">
+        <div className="md:grid flex flex-wrap w-full  justify-center md:grid-cols-3 lg:grid-cols-1 lg:flex-col gap-4 lg:gap-7">
         {[1,2,3].map((hee)=>(
           
           <div className=" h-[16rem] w-full sm:w-[12rem] md:w-[16rem] lg:w-full lg:h-[14rem] relative rounded" key={hee}>
@@ -112,7 +112,7 @@ export default function OurServices() {
       <div className="flex mt-4  w-full justify-center ">
         <Button title={"More Services"} />
       </div>
-      <div className="absolute -bottom-40 md:-bottom-28">
+      <div className="absolute -bottom-32 sm:-bottom-14 md:-bottom-20 lg:-bottom-36">
         <Booking />
 
       </div>

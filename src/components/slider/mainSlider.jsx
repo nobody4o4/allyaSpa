@@ -16,6 +16,7 @@ export default function MainSlider({ sliders }) {
         delay: 2500,
         disableOnInteraction: false,
       }}
+      spaceBetween={10}
       loop={true}
       modules={[Pagination, Autoplay]}
       className="mySwiper"
