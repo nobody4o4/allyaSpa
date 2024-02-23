@@ -7,7 +7,7 @@ import { HiLocationMarker } from "react-icons/hi";
 
 export default function ContactUs() {
   return (
-    <div className="h-full w-full">
+    <div className="h-full w-full pt-24">
       <div className="mb-10 mt-10 flex h-full w-full items-center justify-center">
         <div className=" w-[70%] ">
           <div className="mb-10 flex flex-col items-center justify-center gap-2">
