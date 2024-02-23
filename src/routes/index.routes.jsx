@@ -21,7 +21,7 @@ export default function MainRoute() {
   return (
     <BrowserRouter>
       <Suspense fallback={<LoadingScreen />}>
-        <NavBar />
+        {/* <NavBar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/specific-service" element={<SpecificService />} />

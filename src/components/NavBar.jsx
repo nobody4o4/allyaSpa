@@ -28,10 +28,14 @@ function NavBar() {
   return (
     <div
       className={` top-0  z-40 h-[100pxa] w-full  ${
-        path == "/" || path == "/services" || path == "/gallery"
+        path == "/" ||
+        path == "/services" ||
+        path == "/gallery" ||
+        path == "/about-us" ||
+        path == "/contact-us"
           ? isScrolled
             ? "b  fixed bg-primaryColor duration-300 ease-in"
-            : "backdrop-blur-lsg fixed bg-gradient-to-b from-primaryColor   to-transparent"
+            : "backdrop-blur-lsg fixed bg-gradient-to-b from-primaryColor to-transparent"
           : "fixed bg-primaryColor duration-700 ease-out"
       }`}
     >
