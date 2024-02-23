@@ -7,9 +7,9 @@ function Footer() {
     <div>
       <footer className="items-center bg-primaryColor">
         <div className="mx-auto grid max-w-screen-xl items-center gap-x-12 gap-y-8 px-4 py-10 sm:px-20 md:grid-cols-2  xl:grid-cols-4 xl:px-10">
-          <div className="mb-6 h-fit max-w-sm items-center space-x-2">
+          <div className="mb-6 h-fit max-w-sm space-x-2">
             <img className="h-32 object-center" src={logo} alt="" />
-            <div className="flex w-2/3 justify-between text-3xl">
+            <div className="flex w-32 justify-between text-3xl">
               <FaFacebook className="text-slate-950" />
               <FaInstagram className="text-slate-950" />
               <FaTwitter className="text-slate-950" />
