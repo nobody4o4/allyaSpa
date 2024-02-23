@@ -5,12 +5,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 const Home = lazy(() => import("../pages/Home.jsx"));
 const SpecificService = lazy(() => import("../pages/specificService.jsx"));
 const EachServices = lazy(() => import("../pages/eachServices.jsx"));
-const ContactUs = lazy(()=> import("../pages/ContactUs.jsx"))
-const ServiceCategory = lazy(()=> import("../pages/ServiceCategory.jsx"))
-const AboutUs = lazy(()=> import("../pages/AboutUs.jsx"))
-const GalleryMain = lazy(()=>import("../pages/galleryMain.jsx"))
-const BookAppointment = lazy(()=>import("../pages/BookAppointment.jsx"))
-const Faq = lazy(()=> import("../pages/faq.jsx"))
+const ContactUs = lazy(() => import("../pages/contactUs.jsx"));
+const ServiceCategory = lazy(() => import("../pages/ServiceCategory.jsx"));
+const AboutUs = lazy(() => import("../pages/AboutUs.jsx"));
+const GalleryMain = lazy(() => import("../pages/galleryMain.jsx"));
+const BookAppointment = lazy(() => import("../pages/BookAppointment.jsx"));
+const Faq = lazy(() => import("../pages/faq.jsx"));
 
 //Components
 import NavBar from "../components/NavBar.jsx";
@@ -21,7 +21,7 @@ export default function MainRoute() {
   return (
     <BrowserRouter>
       <Suspense fallback={<LoadingScreen />}>
-        <NavBar />
+        {/* <NavBar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/specific-service" element={<SpecificService />} />

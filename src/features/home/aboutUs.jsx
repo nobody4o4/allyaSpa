@@ -3,7 +3,7 @@ import billie from "../../assets/bill.png";
 
 export default function AboutUs() {
   return (
-    <div className="grid grid-cols-2 gap-10 mx-32 mt-14">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mx-10 lg:mx-32 mt-14">
       <div className=" h-[35rem] ">
         <img className="h-full w-full object-cover" src={billie}></img>
       </div>
@@ -18,15 +18,7 @@ export default function AboutUs() {
           imperdiet dui accumsan. Tincidunt id aliquet risus feugiat in. Quis
           imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper.
           Morbi blandit cursus risus at ultrices mi tempus imperdiet. Vitae
-          tempus quam pellentesque nec nam aliquam sem et. Tincidunt tortor
-          aliquam nulla facilisi cras fermentum odio. Quis eleifend quam
-          adipiscing vitae proin sagittis. Sit amet commodo nulla facilisi
-          nullam vehicula. Ut faucibus pulvinar elementum integer. Morbi blandit
-          cursus risus at ultrices mi tempus imperdiet. Vitae tempus quam
-          pellentesque nec nam aliquam sem et. Tincidunt tortor aliquam nulla
-          facilisi cras fermentum odio. Quis eleifend quam adipiscing vitae
-          proin sagittis. Sit amet commodo nulla facilisi nullam vehicula. Ut
-          faucibus pulvinar elementum integer.
+          tempus quam pellentesque nec nam aliquam sem et. 
         </p>
       </div>
     </div>

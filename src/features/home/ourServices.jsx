@@ -14,13 +14,13 @@ export default function OurServices() {
     setHoverPackage(false);
   };
   return (
-    <div className="flex flex-col items-center justify-center bg-neutralColor  px-32 mt-10 py-32 relative ">
-      <div className="grid grid-cols-2 gap-10">
+    <div className="flex flex-col items-center justify-center bg-neutralColor  px-4 lg:px-32 mt-10 py-32 relative ">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="">
-          <h1 className="text-6xl font-extralight font-serif italic">
+          <h1 className=" text-5xl text-center lg:text-6xl font-semibold ">
             Our Services
           </h1>
-          <div className="mt-10 mb-9">
+          <div className="mt-10 mb-9 text-center lg:text-start">
             <p className="text-[16px] font-thin">
               Indulge in relaxation and rejuvenation at our spa oasis. Unwind
               with luxurious massages, facials, and body treatments tailored to
@@ -39,7 +39,7 @@ export default function OurServices() {
           >
             <img
               src={bill}
-              className={`w-full h-full rounded  ${
+              className={`w-full h-full rounded object-cover  ${
                 hoverPackage
                   ? "scale-100 ease-in duration-1000 "
                   : "scale-105 ease-out duration-1000 "
@@ -78,41 +78,41 @@ export default function OurServices() {
             )}
           </div>
         </div>
-        <div className="flex flex-col gap-7">
-          <div className=" h-[14rem] relative rounded">
+        <div className="md:grid flex flex-wrap w-full border-2 justify-center md:grid-cols-3 lg:grid-cols-1 lg:flex-col gap-4 lg:gap-7">
+        {[1,2,3].map((hee)=>(
+          
+          <div className=" h-[16rem] w-full sm:w-[12rem] md:w-[16rem] lg:w-full lg:h-[14rem] relative rounded" key={hee}>
             <img
               src={bill}
               className="w-full h-full object-cover rounded"
             ></img>
-            <p className="absolute bottom-8 right-10 text-5xl font-serif font-extralight italic text-white">
+            <p className="absolute  bottom-4 lg:bottom-8 right-5 lg:right-10 text-2xl lg:text-5xl font-serif font-extralight italic text-white">
               Massage
             </p>
           </div>
-          <div className=" h-[14rem] relative rounded">
-            <img
-              src={bill}
-              className="w-full h-full object-cover rounded"
-            ></img>
-            <p className="absolute bottom-8 right-10 text-5xl font-serif font-extralight italic text-white">
-              Steam Room
-            </p>
-          </div>
-          <div className=" h-[14rem] relative rounded">
-            <img
-              src={bill}
-              className="w-full h-full object-cover rounded"
-            ></img>
-            <p className="absolute bottom-8 right-10 text-5xl font-serif font-extralight italic text-white">
-              {" "}
-              Facials
-            </p>
-          </div>
+        ))}
+          
         </div>
+        {/* <div className="md:grid flex flex-wrap w-full border-2 justify-center md:grid-cols-3 lg:grid-cols-1 lg:flex-col gap-4 lg:gap-7">
+        {[1,2,3].map((hee)=>(
+          
+          <div className=" h-[16rem] w-[160px] sm:w-[12rem] md:w-[16rem] lg:w-full lg:h-[14rem] relative rounded" key={hee}>
+            <img
+              src={bill}
+              className="w-full h-full object-cover rounded"
+            ></img>
+            <p className="absolute  bottom-4 lg:bottom-8 right-5 lg:right-10 text-2xl lg:text-5xl font-serif font-extralight italic text-white">
+              Massage
+            </p>
+          </div>
+        ))}
+          
+        </div> */}
       </div>
       <div className="flex mt-4  w-full justify-center ">
         <Button title={"More Services"} />
       </div>
-      <div className="absolute -bottom-20">
+      <div className="absolute -bottom-40 md:-bottom-28">
         <Booking />
 
       </div>

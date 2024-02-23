@@ -36,7 +36,7 @@ function AboutUs() {
   ];
 
   return (
-    <div>
+    <div className="">
       <Desc />
       <Feature features={features} />
     </div>
