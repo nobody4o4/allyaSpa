@@ -1,12 +1,12 @@
 import image1 from "../assets/p10.jpg";
-import image2 from "../assets/hero.png";
+import image2 from "../assets/hero.jpg";
 import image3 from "../assets/p3.jpeg";
 import image4 from "../assets/p4.jpeg";
 import Button from "./Button";
 
 function Gallery() {
   return (
-    <div className="h-[900 px] my-10 mt-[10rem]  flex flex-col md:mx-24 lg:mx-32">
+    <div className="h-[900 px] mb-10 mt-[14rem]  flex flex-col md:mx-24 lg:mx-32">
       <div className="mb-8 flex items-center justify-center">
         <p className="text-5xl font-bold">Our Gallery</p>
       </div>

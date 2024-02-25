@@ -21,6 +21,7 @@ function NavBar() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    setIsMenuOpen(false);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -28,12 +29,12 @@ function NavBar() {
 
   return (
     <header
-      className={`lg:px-1a z-40 flex w-full flex-col justify-between overflow-hidden px-3 text-slate-700 sm:px-5 md:px-8 lg:flex-row lg:items-center ${
+      className={`z-40 flex w-full flex-col justify-between overflow-hidden px-3 text-slate-700 sm:px-5 md:px-8 lg:flex-row lg:items-center lg:px-8 ${
         isScrolled
           ? "fixed bg-primaryColor duration-300 ease-in"
           : "fixed bg-gradient-to-b from-primaryColor to-transparent backdrop-blur-lg"
       }
-      ${isMenuOpen ? "h-auto pt-8" : "h-[100px]"}`}
+      ${isMenuOpen ? "h-auto" : "h-[100px]"}`}
     >
       <div className="flex w-full items-center justify-between lg:w-auto">
         <Link to={"/"} className="flex items-center">
@@ -69,7 +70,7 @@ function NavBar() {
           isMenuOpen ? "block pb-4" : "hidden"
         } lg:flex lg:flex-row lg:items-center`}
       >
-        <ul className="flex flex-col items-center space-y-4 text-lg md:space-x-4 lg:flex-row  lg:space-x-8 lg:space-y-0 lg:text-xl">
+        <ul className="flex flex-col items-center space-y-4 text-lg md:space-x-4 lg:flex-row lg:space-x-8 lg:space-y-0 lg:text-xl">
           <li>
             <Link
               to={"/"}
