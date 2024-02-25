@@ -4,7 +4,7 @@ import Description from "../components/specificServices/description";
 
 export default function SpecificService() {
   return (
-    <div className="mx-28 flex flex-col gap-16 mt-[3rem] mb-[60px] ">
+    <div className=" mx-4 mb-[60px] flex flex-col gap-16 pt-40 md:mx-28 ">
       <TopDetails />
       <MainTopics Headers={"Description"} />
       <Description />

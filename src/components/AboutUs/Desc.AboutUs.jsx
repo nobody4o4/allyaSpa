@@ -1,7 +1,14 @@
+import hehe from "../../assets/hero.jpg"
+
 function Desc() {
   return (
+    <div className="">
+      <div className=" h-[25rem] relative">
+        <img className="w-full h-full" src={hehe}></img>
+        <div className="absolute top-44 flex w-full justify-center ">
+        <h1 className="text-5xl font-bold text-white">Allya Spa</h1>
+      </div>      </div>
     <div className=" flex flex-col space-y-10 items-center px-4 py-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-12">
-      <h1 className="text-6xl font-semibold text-primaryColor">Allya Spa</h1>
       <p className="text-justify leading-7">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra
         erat at elit tempus, et scelerisque mi eleifend. Donec augue risus,
@@ -24,6 +31,7 @@ function Desc() {
         Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
         cubilia curae;
       </p>
+    </div>
     </div>
   );
 }

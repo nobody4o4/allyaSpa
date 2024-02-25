@@ -59,7 +59,7 @@ function FormBookAppointment() {
     setSubmitting(false);
   };
   return (
-    <div className="col-span-full py-6 px-4 sm:py-6 lg:col-span-6 lg:py-12">
+    <div className="col-span-full px-4 py-6 sm:py-6 lg:col-span-6 lg:py-12">
       <div className="mx-auto w-full max-w-lg">
         <h1 className="relative text-2xl font-medium text-gray-700 sm:text-3xl">
           Book Appointment
@@ -84,12 +84,12 @@ function FormBookAppointment() {
                   id="fullName"
                   name="fullName"
                   placeholder="John Cena"
-                  className="block w-full rounded-md border border-gray-200 py-3 px-4 pr-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+                  className="block w-full rounded-md border border-gray-200 px-4 py-3 pr-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
                 />
                 <ErrorMessage
                   name="fullName"
                   component="div"
-                  className="text-red-500 text-sm"
+                  className="text-sm text-red-500"
                 />
               </div>
               <div>
@@ -104,12 +104,12 @@ function FormBookAppointment() {
                   id="phoneNumber"
                   name="phoneNumber"
                   placeholder="98XXXXXXX"
-                  className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none block w-full rounded-md border border-gray-200 py-3 px-4 pr-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+                  className="block w-full rounded-md border border-gray-200 px-4 py-3 pr-11 text-sm shadow-sm outline-none [appearance:textfield] focus:z-10 focus:border-blue-500 focus:ring-blue-500 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
                 />
                 <ErrorMessage
                   name="phoneNumber"
                   component="div"
-                  className="text-red-500 text-sm"
+                  className="text-sm text-red-500"
                 />
               </div>
               <div>
@@ -124,12 +124,12 @@ function FormBookAppointment() {
                   id="email"
                   name="email"
                   placeholder="johncena@gmail.com"
-                  className="block w-full rounded-md border border-gray-200 py-3 px-4 pr-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+                  className="block w-full rounded-md border border-gray-200 px-4 py-3 pr-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
                 />
                 <ErrorMessage
                   name="email"
                   component="div"
-                  className="text-red-500 text-sm"
+                  className="text-sm text-red-500"
                 />
               </div>
               <div>
@@ -144,22 +144,27 @@ function FormBookAppointment() {
                   id="address"
                   name="address"
                   placeholder="Lakeside,Pokhara-6"
-                  className="block w-full rounded-md border border-gray-200 py-3 px-4 pr-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+                  className="block w-full rounded-md border border-gray-200 px-4 py-3 pr-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
                 />
                 <ErrorMessage
                   name="address"
                   component="div"
-                  className="text-red-500 text-sm"
+                  className="text-sm text-red-500"
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700">
                   Select Date Range
                 </label>
-                <DateRangePicker
+                <input
+                  placeholder="Date"
+                  type="date"
+                  className="rounded-md border border-black p-2 outline-none"
+                ></input>
+                {/* <DateRangePicker
                   ranges={dateRange}
                   onChange={handleDateSelect}
-                />
+                /> */}
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700">
@@ -169,7 +174,7 @@ function FormBookAppointment() {
                   name="time"
                   value={selectedTime}
                   onChange={handleTimeChange}
-                  className="block w-full rounded-md border border-gray-200 py-3 px-4 pr-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+                  className="block w-full rounded-md border border-gray-200 px-4 py-3 pr-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
                 >
                   {[...Array(13).keys()].map((hour) => {
                     const paddedHour = hour.toString().padStart(2, "0");
@@ -185,7 +190,7 @@ function FormBookAppointment() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="mt-4 inline-flex w-full items-center justify-center rounded bg-teal-600 py-2.5 px-4 text-base font-semibold tracking-wide text-white text-opacity-80 outline-none ring-offset-2 transition hover:text-opacity-100 focus:ring-2 focus:ring-teal-500 sm:text-lg"
+                className="mt-4 inline-flex w-full items-center justify-center rounded bg-teal-600 px-4 py-2.5 text-base font-semibold tracking-wide text-white text-opacity-80 outline-none ring-offset-2 transition hover:text-opacity-100 focus:ring-2 focus:ring-teal-500 sm:text-lg"
               >
                 {isSubmitting ? "Submitting..." : "Place Order"}
               </button>
