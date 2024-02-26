@@ -4,6 +4,7 @@ import FlipCardServiceCategory from "../components/ServiceCategory/FlipCard.Serv
 import TitleServiceCategory from "../components/ServiceCategory/Title.ServiceCategory";
 import getServiceCategories from "../endpoint/services.endpoint";
 import { useState } from "react";
+import messageIMG from "../assets/p10.jpg";
 
 function ServiceCategory() {
   const [service, setService] = useState([]);
@@ -32,7 +33,30 @@ function ServiceCategory() {
           image={services.image}
         />
       ))}
-      <CardServiceCategory />
+      <CardServiceCategory
+        title="Message"
+        description=" Lorem ipsum dolor sit amet, as ss consectetur adipiscing elit, sed
+        do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Sollicitudin tempor id eu nisl nunca mi ipsum. Risus quis varius
+        quam quisque id."
+        image={messageIMG}
+      />
+      <FlipCardServiceCategory
+        title="Message"
+        description=" Lorem ipsum dolor sit amet, as ss consectetur adipiscing elit, sed
+        do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Sollicitudin tempor id eu nisl nunca mi ipsum. Risus quis varius
+        quam quisque id."
+        image={messageIMG}
+      />
+      <CardServiceCategory
+        title="Message"
+        description=" Lorem ipsum dolor sit amet, as ss consectetur adipiscing elit, sed
+       do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Sollicitudin tempor id eu nisl nunca mi ipsum. Risus quis varius
+       quam quisque id."
+        image={messageIMG}
+      />
     </div>
   );
 }

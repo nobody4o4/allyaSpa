@@ -1,22 +1,17 @@
-import messageIMG from "../../assets/p10.jpg";
-
-function CardServiceCategory() {
+function CardServiceCategory({ title, description, image }) {
   return (
-    <div className="relative w-2/3 mx-auto h-72 flex -scale-[-1]">
-      <div className="bg-cyan-100 h-2/3 mt-16 mr-20 bottom-0 flex">
-        <div className="flex flex-col gap-y-4 pl-7 my-auto ">
-          <h1 className="text-4xl font-medium">Massage</h1>
-          <p className="w-[90%] text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Sollicitudin tempor id eu nisl nunca mi ipsum. Risus quis varius
-            quam quisque id.
+    <div className="relative mx-5 flex h-60 md:mx-28 lg:mx-52">
+      <div className="bottom-0 mr-5 mt-10 flex bg-cyan-100 lg:mr-10">
+        <div className="my-auto flex flex-col gap-y-2 pl-2  md:pl-4  lg:gap-y-4 lg:pl-7">
+          <h1 className="text-3xl font-medium lg:text-4xl">{title}</h1>
+          <p className="line-clamp-4 text-justify font-light sm:line-clamp-none md:text-base lg:text-lg">
+            {description}
           </p>
         </div>
         <img
-          src={messageIMG}
+          src={image}
           alt=""
-          className="aspect-square w-60 object-cover translate-x-10 -translate-y-10"
+          className="aspect-square w-36 -translate-y-10 translate-x-5  object-cover md:w-52 lg:w-60 lg:translate-x-10"
         />
       </div>
     </div>
