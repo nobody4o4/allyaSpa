@@ -1,7 +1,7 @@
 export default function Description() {
   return (
-    <div className=" mx-48">
-      <div className="flex flex-col gap-3 text-sm font-semibold">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col gap-3 text-center text-sm font-semibold md:text-start">
         <p>
           Swedish massage was developed in Sweden. Swedish massage, along with
           Thai massage, is one of the most well-known massage techniques.
@@ -21,11 +21,11 @@ export default function Description() {
         <h1 className="text-xl font-bold">
           Health benefits of Swedish massage
         </h1>
-        <ol className=" list-decimal pl-5 text-sm">
+        <ol className="list-decimal pl-5 text-sm">
           <li>Helps reduce stress</li>
-          <li>Helps reduce muscle tension </li>{" "}
-          <li>Helps with pain management </li>{" "}
-          <li>Helps improve blood circulation </li>
+          <li>Helps reduce muscle tension</li>
+          <li>Helps with pain management</li>
+          <li>Helps improve blood circulation</li>
           <li>Boosts immune system</li>
           <li>Helps you sleep better</li>
         </ol>
