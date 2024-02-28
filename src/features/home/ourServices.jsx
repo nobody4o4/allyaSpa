@@ -14,13 +14,13 @@ export default function OurServices() {
     setHoverPackage(false);
   };
   return (
-    <div className="flex flex-col items-center justify-center bg-neutralColor  px-4 lg:px-32 mt-10 py-24 relative ">
-      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div className="relative mt-10 flex flex-col items-center  justify-center bg-neutralColor px-4 py-24 lg:px-32 ">
+      <div className=" grid grid-cols-1 gap-10 lg:grid-cols-2">
         <div className="">
-          <h1 className=" text-5xl text-center lg:text-6xl font-semibold ">
+          <h1 className=" text-center text-5xl font-semibold lg:text-6xl ">
             Our Services
           </h1>
-          <div className="mt-10 mb-9 text-center lg:text-start">
+          <div className="mb-9 mt-10 text-center lg:text-start">
             <p className="text-[16px] font-thin">
               Indulge in relaxation and rejuvenation at our spa oasis. Unwind
               with luxurious massages, facials, and body treatments tailored to
@@ -33,32 +33,32 @@ export default function OurServices() {
             </p>
           </div>
           <div
-            className="h-[420px] md:h-[460px] lg:h-[471px] relative cursor-pointer overflow-hidden rounded "
+            className="relative h-[420px] cursor-pointer overflow-hidden rounded md:h-[460px] lg:h-[471px] "
             onMouseEnter={handleHoverPackage}
             onMouseLeave={handleHoverLeave}
           >
             <img
               src={bill}
-              className={`w-full h-full rounded object-cover  ${
+              className={`h-full w-full rounded object-cover  ${
                 hoverPackage
-                  ? "scale-100 ease-in duration-1000 "
-                  : "scale-105 ease-out duration-1000 "
+                  ? "scale-100 duration-1000 ease-in "
+                  : "scale-105 duration-1000 ease-out "
               } `}
             ></img>
             {hoverPackage ? (
-              <div className="inset-0 absolute group hover:bg-black hover:bg-opacity-25 ease-in duration-500">
+              <div className="group absolute inset-0 duration-500 ease-in hover:bg-black hover:bg-opacity-25">
                 <div
-                  className={`absolute bottom-8 right-2  md:right-5 lg:right-10 text-5xl  opacity-0 group-hover:opacity-100  ease-in duration-700   flex flex-col justify-end items-end`}
+                  className={`absolute bottom-8 right-2  flex flex-col items-end  justify-end text-5xl  opacity-0 duration-700   ease-in group-hover:opacity-100 md:right-5 lg:right-10`}
                 >
-                  <h1 className="italic text-3xl  lg:text-5xl text-cyan-200 font-serif font-extralight">
+                  <h1 className="font-serif text-3xl  font-extralight italic text-cyan-200 lg:text-5xl">
                     Spa Package
                   </h1>
-                  <div className=" text-xs lg:text-sm text-white  flex flex-col justify-end items-end">
+                  <div className=" flex flex-col items-end  justify-end text-xs text-white lg:text-sm">
                     <p className="text-end">
                       These packages typically include a combination of
                       treatments such as:
                     </p>
-                    <ul className="list-disc flex items-end flex-col">
+                    <ul className="flex list-disc flex-col items-end">
                       <li>Massages</li>
                       <li>Facials</li>
                       <li>Body Scrubs</li>
@@ -72,51 +72,35 @@ export default function OurServices() {
                 </div>
               </div>
             ) : (
-              <p className="absolute bottom-4 lg:bottom-8 right-5 lg:right-10 text-2xl lg:text-5xl font-serif font-extralight hover:opacity-15 ease-in duration-700 italic text-white">
+              <p className="absolute bottom-4 right-5 font-serif text-2xl font-extralight italic text-white duration-700 ease-in hover:opacity-15 lg:bottom-8 lg:right-10 lg:text-5xl">
                 Spa Package
               </p>
             )}
           </div>
         </div>
-        <div className="md:grid flex flex-wrap w-full  justify-center md:grid-cols-3 lg:grid-cols-1 lg:flex-col gap-4 lg:gap-7">
-        {[1,2,3].map((hee)=>(
-          
-          <div className=" h-[16rem] w-full sm:w-[12rem] md:w-[16rem] lg:w-full lg:h-[14rem] relative rounded" key={hee}>
-            <img
-              src={bill}
-              className="w-full h-full object-cover rounded"
-            ></img>
-            <p className="absolute  bottom-4 lg:bottom-8 right-5 lg:right-10 text-2xl lg:text-5xl font-serif font-extralight italic text-white">
-              Massage
-            </p>
-          </div>
-        ))}
-          
+        <div className="flex w-full flex-wrap justify-center  gap-4 md:grid md:grid-cols-3 lg:grid-cols-1 lg:flex-col lg:gap-7">
+          {[1, 2, 3].map((hee) => (
+            <div
+              className=" relative h-[16rem] w-full rounded sm:w-[12rem] md:w-[16rem] lg:h-[14rem] lg:w-full"
+              key={hee}
+            >
+              <img
+                src={bill}
+                className="h-full w-full rounded object-cover"
+              ></img>
+              <p className="absolute  bottom-4 right-5 font-serif text-2xl font-extralight italic text-white lg:bottom-8 lg:right-10 lg:text-5xl">
+                Massage
+              </p>
+            </div>
+          ))}
         </div>
-        {/* <div className="md:grid flex flex-wrap w-full border-2 justify-center md:grid-cols-3 lg:grid-cols-1 lg:flex-col gap-4 lg:gap-7">
-        {[1,2,3].map((hee)=>(
-          
-          <div className=" h-[16rem] w-[160px] sm:w-[12rem] md:w-[16rem] lg:w-full lg:h-[14rem] relative rounded" key={hee}>
-            <img
-              src={bill}
-              className="w-full h-full object-cover rounded"
-            ></img>
-            <p className="absolute  bottom-4 lg:bottom-8 right-5 lg:right-10 text-2xl lg:text-5xl font-serif font-extralight italic text-white">
-              Massage
-            </p>
-          </div>
-        ))}
-          
-        </div> */}
       </div>
-      <div className="flex mt-4  w-full justify-center ">
+      <div className="mt-4 flex  w-full justify-center ">
         <Button title={"More Services"} />
       </div>
-      <div className="absolute -bottom-32 sm:-bottom-14 md:-bottom-20 lg:-bottom-36">
+      <div className="absolute -bottom-32 w-full sm:-bottom-14 md:-bottom-20 lg:-bottom-36">
         <Booking />
-
       </div>
-
     </div>
   );
 }

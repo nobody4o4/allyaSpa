@@ -8,6 +8,7 @@ function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  console.log(location);
   const path = location.pathname;
 
   const handleScroll = () => {
@@ -33,7 +34,7 @@ function NavBar() {
       className={`z-40 flex w-full flex-col justify-between overflow-hidden px-3 text-slate-700 sm:px-5 md:px-8 lg:flex-row lg:items-center lg:px-8 ${
         isScrolled
           ? "fixed bg-primaryColor duration-300 ease-in"
-          : "fixed bg-gradient-to-b from-primaryColor to-transparent backdrop-blur-lg"
+          : "fixed bg-gradient-to-b from-primaryColor to-transparent backdrop-blur-sm"
       }
       ${isMenuOpen ? "h-auto" : "h-[100px]"}`}
     >
@@ -83,7 +84,7 @@ function NavBar() {
           <li>
             <Link
               to={"/about-us"}
-              className="text-2xl  font-medium text-slate-700 hover:text-gray-900"
+              className={`text-2xl font-medium  ${path == "/about-us" ? "text-slate-100 hover:text-slate-300" : "text-slate-700 hover:text-gray-900"} `}
             >
               About-Us
             </Link>
@@ -115,9 +116,16 @@ function NavBar() {
         </ul>
       </nav>
       <div className="flex items-center space-x-8">
-        <button className=" hidden rounded-md border-2 bg-primaryColor px-4 py-2 text-base font-medium text-white shadow-lg hover:bg-teal-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-800 lg:block">
+        <Link
+          to="/appointment"
+          className=" hidden rounded-md border-2 bg-primaryColor px-4 py-2 text-base font-medium text-white shadow-lg hover:bg-teal-400  lg:block"
+        >
           Book Appointment
+<<<<<<< HEAD
         </button>
+=======
+        </Link>
+>>>>>>> 8aa19dd473bafd707c33e82a029553b592b0943b
         <div className="hidden w-fit items-center space-x-2 2md:flex  ">
           <FaPhoneAlt className="text-xl text-slate-700 " />
           <span className="text-lg font-medium text-slate-700">

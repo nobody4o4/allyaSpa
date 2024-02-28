@@ -3,7 +3,7 @@ import SelectService from "../features/BookAppointment/SelectService";
 
 function BookAppointment() {
   return (
-    <div className="relative mx-auto w-full bg-white p-8">
+    <div className="relative mx-auto w-full bg-white p-8 pt-28">
       <div className="grid min-h-screen grid-cols-10">
         <FormBookAppointment />
         <SelectService />

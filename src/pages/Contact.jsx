@@ -11,7 +11,7 @@ import ContactUsForm from "../features/contactUs/contactUsForm";
 
 export default function ContactUs() {
   return (
-    <div className="h-full w-full pt-24 sm:ml-10 sm:mr-10">
+    <div className="h-full w-full pt-24 sm:mx-10 lg:mx-0">
       <div className="mb-10 flex flex-col items-center justify-center">
         <div className="w-full max-w-4xl">
           <div className="mb-10 flex flex-col items-center justify-center gap-2">
