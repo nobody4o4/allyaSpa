@@ -3,11 +3,11 @@ import Reviews from "../../components/reviews";
 
 export default function ReviewsMain() {
   return (
-    <div className=" w-full flex items-center justify-center flex-col from-transparent via-cyan-100 to-transparent  font-serif text-lg md:text-xl lg:text-3xl py-0 lg:py-8 mb-10">
-      <div className="flex flex-col items-center justify-center gap-2 lg:w-[80%] italic ">
+    <div className=" mb-10 flex w-full flex-col items-center justify-center bg-cyan-100   py-0 font-serif text-lg md:text-xl lg:py-8 lg:text-3xl">
+      <div className="flex flex-col items-center justify-center gap-2 italic lg:w-[80%] ">
         <h1>What our clients had to say </h1>
         <h1>about us!</h1>
-        <div className=" mt-6 md:mt-16 lg:mt-20 w-[22rem] md:w-[40rem] lg:w-[80rem]">
+        <div className=" mt-6 w-[22rem] md:mt-16 md:w-[40rem] lg:mt-20 lg:w-[80rem]">
           <MainSlider sliders={<Reviews />} />
         </div>
       </div>

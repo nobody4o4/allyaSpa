@@ -34,7 +34,7 @@ function ServiceCategory() {
         />
       ))}
       <CardServiceCategory
-        title="Message"
+        title="Massage"
         description=" Lorem ipsum dolor sit amet, as ss consectetur adipiscing elit, sed
         do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Sollicitudin tempor id eu nisl nunca mi ipsum. Risus quis varius
@@ -42,7 +42,7 @@ function ServiceCategory() {
         image={messageIMG}
       />
       <FlipCardServiceCategory
-        title="Message"
+        title="Massage"
         description=" Lorem ipsum dolor sit amet, as ss consectetur adipiscing elit, sed
         do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Sollicitudin tempor id eu nisl nunca mi ipsum. Risus quis varius
@@ -50,7 +50,7 @@ function ServiceCategory() {
         image={messageIMG}
       />
       <CardServiceCategory
-        title="Message"
+        title="Massage"
         description=" Lorem ipsum dolor sit amet, as ss consectetur adipiscing elit, sed
        do eiusmod tempor incididunt ut labore et dolore magna aliqua.
        Sollicitudin tempor id eu nisl nunca mi ipsum. Risus quis varius

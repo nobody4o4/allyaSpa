@@ -9,7 +9,6 @@ function FormBookAppointment() {
     {
       startDate: new Date(),
       endDate: new Date(),
-
       key: "selection",
     },
   ]);
@@ -22,6 +21,7 @@ function FormBookAppointment() {
 
   const handleTimeChange = (e) => {
     setSelectedTime(e.target.value);
+    console.log(e.target.value);
   };
 
   const initialValues = {
@@ -35,19 +35,19 @@ function FormBookAppointment() {
     const errors = {};
 
     if (!values.fullName) {
-      errors.fullName = "Required";
+      errors.fullName = "Full name is Required";
     }
 
     if (!values.phoneNumber) {
-      errors.phoneNumber = "Required";
+      errors.phoneNumber = "Phone number is Required";
     }
 
     if (!values.email) {
-      errors.email = "Required";
+      errors.email = "Email is Required";
     }
 
     if (!values.address) {
-      errors.address = "Required";
+      errors.address = "Address is  Required";
     }
 
     return errors;
