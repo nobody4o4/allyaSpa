@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import logo from "../assets/Logo.png";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
-import { fetchImage } from "../utils/fetchImage";
 
 function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -121,18 +120,13 @@ function NavBar() {
           className=" hidden rounded-md border-2 bg-primaryColor px-4 py-2 text-base font-medium text-white shadow-lg hover:bg-teal-400  lg:block"
         >
           Book Appointment
-<<<<<<< HEAD
-        </button>
-=======
         </Link>
->>>>>>> 8aa19dd473bafd707c33e82a029553b592b0943b
         <div className="hidden w-fit items-center space-x-2 2md:flex  ">
           <FaPhoneAlt className="text-xl text-slate-700 " />
           <span className="text-lg font-medium text-slate-700">
             +123-12345678
           </span>
         </div>
-        <img src={image}></img>
       </div>
     </header>
   );
