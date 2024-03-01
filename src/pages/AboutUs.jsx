@@ -34,6 +34,7 @@ function AboutUs() {
         "Storage shed, troughs feed bale manure, is garden wheat oats at augers. Bulls at rose garden cucumbers mice sunflower wheat in pig.",
     },
   ];
+  const { data } = AboutUs();
 
   return (
     <div className="">
