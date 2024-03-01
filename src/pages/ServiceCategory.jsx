@@ -2,7 +2,7 @@ import CardServiceCategory from "../components/ServiceCategory/Card.ServiceCateg
 import FlipCardServiceCategory from "../components/ServiceCategory/FlipCard.ServiceCategory";
 import TitleServiceCategory from "../components/ServiceCategory/Title.ServiceCategory";
 import messageIMG from "../assets/p10.jpg";
-import AllServiceCategories from "../services/serviceCategories.services";
+import AllServiceCategories from "../services/serviceCategories.service";
 
 function ServiceCategory() {
   // const [service, setService] = useState([]);

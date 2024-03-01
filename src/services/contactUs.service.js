@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { getAboutUs } from "../endpoint/services.endpoint";
+import { getContact } from "../endpoint/services.endpoint";
 
-function AboutUs() {
+function ContactUsFetch() {
   const [data, setdata] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await getAboutUs();
+        const response = await getContact();
         setdata(response.data);
         console.log(data, "sca");
       } catch (error) {
@@ -19,4 +19,4 @@ function AboutUs() {
   return data;
 }
 
-export default AboutUs;
+export default ContactUsFetch;

@@ -8,8 +8,12 @@ import {
   FaTwitter,
 } from "react-icons/fa6";
 import ContactUsForm from "../features/contactUs/contactUsForm";
+import ContactUsFetch from "../services/contactUs.service";
 
 export default function ContactUs() {
+  const { data } = ContactUsFetch();
+
+  console.log(data);
   return (
     <div className="h-full w-full pt-24 sm:mx-10 lg:mx-0">
       <div className="mb-10 flex flex-col items-center justify-center">
@@ -33,15 +37,19 @@ export default function ContactUs() {
               <div className="mt-6 flex flex-col gap-6">
                 <div className="text-md flex items-center gap-5">
                   <BiSolidPhoneCall className="text-xl" />
-                  <p>9812357648</p>
+                  <p>{data?.tel}</p>
+                </div>
+                <div className="text-md flex items-center gap-5">
+                  <BiSolidPhoneCall className="text-xl" />
+                  <p>{data?.phone}</p>
                 </div>
                 <div className="text-md flex items-center gap-5">
                   <FaCreativeCommonsSamplingPlus className="text-xl" />
-                  <p>info@allyaspa.com.np</p>
+                  <p>{data?.email}</p>
                 </div>
                 <div className="text-md flex items-center gap-5">
                   <FaLocationArrow className="text-xl" />
-                  <p>Street No. 17, Lakeside Pokhara Nepal</p>
+                  <p>{data?.address}</p>
                 </div>
               </div>
               <div className="mt-6 flex justify-center gap-3 lg:justify-start">

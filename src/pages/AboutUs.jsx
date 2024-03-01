@@ -1,5 +1,8 @@
 import Desc from "../components/AboutUs/Desc.AboutUs";
 import Feature from "../components/AboutUs/FeaturesGrid.AboutUs";
+import { getAboutUs } from "../endpoint/services.endpoint";
+import AboutUsFetch from "../services/aboutUs.service";
+import FetchMain from "../services/fetchMain.service";
 
 function AboutUs() {
   const features = [
@@ -34,8 +37,9 @@ function AboutUs() {
         "Storage shed, troughs feed bale manure, is garden wheat oats at augers. Bulls at rose garden cucumbers mice sunflower wheat in pig.",
     },
   ];
-  const { data } = AboutUs();
 
+  const { data } = FetchMain(getAboutUs);
+  console.log(data);
   return (
     <div className="">
       <Desc />
