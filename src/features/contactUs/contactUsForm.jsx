@@ -1,16 +1,21 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import PostMain from "../../services/postMain.service";
+import { useState } from "react";
+import { postContact } from "../../endpoint/services.endpoint";
 
 export default function ContactUsForm() {
   // const {jwt} = useSelector((state)=>state.user)
 
+  const [mainData, setMainData] = useState({});
+
   const contactUsValidationSchema = Yup.object({
-    firstName: Yup.string().required("First Name is required"),
-    lastName: Yup.string().required("Last Name is required"),
+    firstname: Yup.string().required("First Name is required"),
+    lastname: Yup.string().required("Last Name is required"),
     email: Yup.string()
       .email("Invalid email address")
       .required("Email is required"),
-    phoneNumber: Yup.number("Phone Number must be on number").required(
+    phone: Yup.number("Phone Number must be on number").required(
       "Phone Number is required",
     ),
     message: Yup.string().required("Message is required"),
@@ -26,71 +31,74 @@ export default function ContactUsForm() {
     resetForm,
   } = useFormik({
     initialValues: {
-      firstName: "",
-      lastName: "",
+      firstname: "",
+      lastname: "",
       email: "",
-      phoneNumber: "",
+      phone: "",
       message: "",
     },
     validationSchema: contactUsValidationSchema,
     onSubmit: async (values) => {
       // await sendMessage(values);
+      hehe(values);
+      console.log("JAJAJAJ");
     },
   });
 
-  // const sendMessage=async(form)=>{
-  //     try{
-  //         const res = await sendContactUsMail(hotel_id,form,jwt)
-  //         console.log(res.data);
-  //         toast.success(res.data.message)
-  //         resetForm()
-  //     }catch(e){
-  //         console.log(e);
-  //         toast.error(e.response.data.message)
-  //     }
-  // }
+  const hehe = async (values) => {
+    try {
+      const response = await postContact(values);
+      setMainData(response.data);
+      console.log(data, "sca");
+      resetForm();
+    } catch (error) {
+      console.log("error", error);
+    }
+  };
+
+  console.log(mainData);
 
   return (
     <form className="my-4 flex flex-col gap-6 px-16" onSubmit={handleSubmit}>
       <div className="flex  w-full gap-10 ">
         <div className="h-[6rem] flex-1">
           <label
-            htmlFor="firstName"
+            htmlFor="firstname"
             className="block text-sm font-medium text-black"
           >
             First Name
           </label>
           <input
             type="text"
-            id="firstName"
-            name="firstName"
-            value={values.firstName}
+            id="firstname"
+            name="firstname"
+            value={values.firstname}
             onChange={handleChange}
             onBlur={handleBlur}
             className="w-full border-b-2  border-gray-400 pb-2  pt-2 text-black outline-none transition focus:border-black"
           />
-          {touched.firstName && errors.firstName ? (
-            <p className="text-red-600">{errors.firstName}</p>
+          {touched.firstname && errors.firstname ? (
+            <p className="text-red-600">{errors.firstname}</p>
           ) : null}
         </div>
         <div className="h-[6rem] flex-1">
           <label
-            htmlFor="lastName"
+            htmlFor="lastname"
             className="block text-sm font-medium text-black"
           >
             Last Name
           </label>
           <input
             type="text"
-            id="lastName"
-            name="lastName"
-            value={values.lastName}
+            id="lastname"
+            name="lastname"
+            value={values.lastname}
             onChange={handleChange}
             onBlur={handleBlur}
             className="w-full border-b-2  border-gray-400 pb-2  pt-2 text-black outline-none transition focus:border-black"
           />
-          {touched.lastName && errors.lastName ? (
-            <p className="text-red-600">{errors.lastName}</p>
+          {touched.lastname && errors.lastname ? (
+            <p className="text-red-600">{errors.lastname}</p>
           ) : null}
         </div>
       </div>
@@ -124,15 +132,15 @@ export default function ContactUsForm() {
           </label>
           <input
             type="text"
-            id="phoneNumber"
-            name="phoneNumber"
-            value={values.phoneNumber}
+            id="phone"
+            name="phone"
+            value={values.phone}
             onChange={handleChange}
             onBlur={handleBlur}
             className="w-full border-b-2  border-gray-400 pb-2  pt-2 text-black outline-none transition focus:border-black"
           />
-          {touched.phoneNumber && errors.phoneNumber ? (
-            <p className="text-red-600">{errors.phoneNumber}</p>
+          {touched.phone && errors.phone ? (
+            <p className="text-red-600">{errors.phone}</p>
           ) : null}
         </div>
       </div>

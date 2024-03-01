@@ -2,7 +2,8 @@ import CardServiceCategory from "../components/ServiceCategory/Card.ServiceCateg
 import FlipCardServiceCategory from "../components/ServiceCategory/FlipCard.ServiceCategory";
 import TitleServiceCategory from "../components/ServiceCategory/Title.ServiceCategory";
 import messageIMG from "../assets/p10.jpg";
-import AllServiceCategories from "../services/serviceCategories.service";
+import FetchMain from "../services/fetchMain.service";
+import { getServiceCategories } from "../endpoint/services.endpoint";
 
 function ServiceCategory() {
   // const [service, setService] = useState([]);
@@ -20,8 +21,7 @@ function ServiceCategory() {
   //   }
   // }
 
-  const { data } = AllServiceCategories();
-  console.log(data, "sc");
+  const { data } = FetchMain(getServiceCategories);
 
   return (
     <div className="space-y-5">

@@ -8,10 +8,11 @@ import {
   FaTwitter,
 } from "react-icons/fa6";
 import ContactUsForm from "../features/contactUs/contactUsForm";
-import ContactUsFetch from "../services/contactUs.service";
+import FetchMain from "../services/fetchMain.service";
+import { getContact } from "../endpoint/services.endpoint";
 
 export default function ContactUs() {
-  const { data } = ContactUsFetch();
+  const { data } = FetchMain(getContact);
 
   console.log(data);
   return (

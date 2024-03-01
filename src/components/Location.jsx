@@ -1,4 +1,9 @@
+import { getContact } from "../endpoint/services.endpoint";
+import FetchMain from "../services/fetchMain.service";
+
 function Location() {
+  const { data } = FetchMain(getContact);
+  console.log(data);
   return (
     <section className="flex flex-col justify-center  bg-white pb-12 pt-8 max-md:px-5 md:mx-24  lg:mx-32">
       <h1 className="text-4xl font-bold tracking-[2px] text-black max-md:mt-10 max-md:max-w-full max-md:text-4xl">
@@ -10,7 +15,7 @@ function Location() {
             <div className=" flex grow flex-col text-2xl tracking-wider max-md:mt-10">
               <h2 className="font-medium">Address:</h2>
               <div className="mt-2.5 text-xl font-light">
-                Street No. 11, Lakeside <br /> Pokhara, Nepal
+                {data?.address} <br /> Pokhara, Nepal
               </div>
             </div>
           </div>
@@ -18,8 +23,8 @@ function Location() {
             <div className="flex grow flex-col text-2xl tracking-wider max-md:mt-10">
               <h2 className="font-medium">Contact Info:</h2>
               <div className="mt-2.5 text-xl font-light">
-                +977 9834567899,
-                <br /> +061 573955 <br /> info@allyaspa.com.np
+                {data?.phone},
+                <br /> {data?.tel} <br /> {data?.email}
               </div>
             </div>
           </div>

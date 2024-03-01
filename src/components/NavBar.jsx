@@ -21,12 +21,20 @@ function NavBar() {
   };
 
   useEffect(() => {
+    scrollToTop();
     window.addEventListener("scroll", handleScroll);
     setIsMenuOpen(false);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [path]);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <header

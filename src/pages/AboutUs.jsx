@@ -1,7 +1,6 @@
 import Desc from "../components/AboutUs/Desc.AboutUs";
 import Feature from "../components/AboutUs/FeaturesGrid.AboutUs";
 import { getAboutUs } from "../endpoint/services.endpoint";
-import AboutUsFetch from "../services/aboutUs.service";
 import FetchMain from "../services/fetchMain.service";
 
 function AboutUs() {
@@ -39,10 +38,11 @@ function AboutUs() {
   ];
 
   const { data } = FetchMain(getAboutUs);
+
   console.log(data);
   return (
     <div className="">
-      <Desc />
+      <Desc {...data} />
       <Feature features={features} />
     </div>
   );
