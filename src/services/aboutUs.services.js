@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getAboutUs } from "../endpoint/services.endpoint";
 
-function AboutUs() {
+function AboutUsFetch() {
   const [data, setdata] = useState([]);
 
   useEffect(() => {
@@ -19,4 +19,4 @@ function AboutUs() {
   return data;
 }
 
-export default AboutUs;
+export default AboutUsFetch;

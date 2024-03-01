@@ -23,6 +23,10 @@ const getContact = () => {
   const res = url.get(`/contact`);
   return res;
 };
+const postContact = () => {
+  const res = url.post(`/contactus`);
+  return res;
+};
 
 const getSocial = () => {
   const res = url.get(`/social-media`);
@@ -35,8 +39,7 @@ const getTermsCondition = () => {
 };
 
 const getAboutUs = () => {
-  const res = url.get(`/aboutus`);
-  return res;
+  return url.get(`/aboutus`);
 };
 
 export {
@@ -48,4 +51,5 @@ export {
   getContact,
   getSocial,
   getTermsCondition,
+  postContact,
 };

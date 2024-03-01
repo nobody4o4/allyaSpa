@@ -1,5 +1,6 @@
 import Desc from "../components/AboutUs/Desc.AboutUs";
 import Feature from "../components/AboutUs/FeaturesGrid.AboutUs";
+import AboutUsFetch from "../services/aboutUs.services";
 
 function AboutUs() {
   const features = [
@@ -34,11 +35,13 @@ function AboutUs() {
         "Storage shed, troughs feed bale manure, is garden wheat oats at augers. Bulls at rose garden cucumbers mice sunflower wheat in pig.",
     },
   ];
-  const { data } = AboutUs();
+
+  const { data } = AboutUsFetch();
+  console.log(data, "sca");
 
   return (
     <div className="">
-      <Desc />
+      <Desc {...data} />
       <Feature features={features} />
     </div>
   );
