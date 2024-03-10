@@ -1,63 +1,50 @@
 import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { DateRangePicker } from "react-date-range";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
+import * as Yup from "yup";
+import { postBookings } from "../../endpoint/services.endpoint";
 
 function FormBookAppointment() {
-  const [dateRange, setDateRange] = useState([
-    {
-      startDate: new Date(),
-      endDate: new Date(),
-      key: "selection",
-    },
-  ]);
+  const [selectedDate, setSelectedDate] = useState(
+    new Date().toISOString().slice(0, 10),
+  ); // Initialize with current date
 
   const [selectedTime, setSelectedTime] = useState("08:00");
-
-  const handleDateSelect = (ranges) => {
-    setDateRange([ranges.selection]);
-  };
 
   const handleTimeChange = (e) => {
     setSelectedTime(e.target.value);
     console.log(e.target.value);
   };
 
+  const handleDateChange = (e) => {
+    setSelectedDate(e.target.value);
+    console.log(e.target.value);
+  };
+  const serv = "massage";
+
   const initialValues = {
-    fullName: "",
-    phoneNumber: "",
+    name: "",
+    number: "",
     email: "",
     address: "",
+    date: selectedDate,
+    time: selectedTime,
+    service: serv,
   };
 
-  const validate = (values) => {
-    const errors = {};
-
-    if (!values.fullName) {
-      errors.fullName = "Full name is Required";
-    }
-
-    if (!values.phoneNumber) {
-      errors.phoneNumber = "Phone number is Required";
-    }
-
-    if (!values.email) {
-      errors.email = "Email is Required";
-    }
-
-    if (!values.address) {
-      errors.address = "Address is  Required";
-    }
-
-    return errors;
-  };
-
-  const handleSubmit = (values, { setSubmitting }) => {
+  const handleSubmit = async (values, { setSubmitting }) => {
     // Handle form submission logic here
-    console.log(values);
-    setSubmitting(false);
+    try {
+      console.log(values);
+      const res = await postBookings(values);
+      console.log(res.data);
+      setSubmitting(false);
+    } catch (e) {
+      console.log(e.response);
+    }
   };
+
   return (
     <div className="col-span-full px-4 py-6 sm:py-6 lg:col-span-6 lg:py-12">
       <div className="mx-auto w-full max-w-lg">
@@ -67,47 +54,55 @@ function FormBookAppointment() {
         </h1>
         <Formik
           initialValues={initialValues}
-          validate={validate}
+          validationSchema={Yup.object({
+            name: Yup.string().required("Full name is Required"),
+            number: Yup.string().required("Phone number is Required"),
+            date: Yup.date().required("Please select a date"),
+            email: Yup.string()
+              .email("Invalid email address")
+              .required("Email is Required"),
+            address: Yup.string().required("Address is Required"),
+          })}
           onSubmit={handleSubmit}
         >
           {({ isSubmitting }) => (
             <Form className="mt-10 flex flex-col space-y-4">
               <div>
                 <label
-                  htmlFor="fullName"
+                  htmlFor="name"
                   className="block text-sm font-medium text-gray-700"
                 >
                   Full Name
                 </label>
                 <Field
                   type="text"
-                  id="fullName"
-                  name="fullName"
+                  id="name"
+                  name="name"
                   placeholder="John Cena"
                   className="block w-full rounded-md border border-gray-200 px-4 py-3 pr-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
                 />
                 <ErrorMessage
-                  name="fullName"
+                  name="name"
                   component="div"
                   className="text-sm text-red-500"
                 />
               </div>
               <div>
                 <label
-                  htmlFor="phoneNumber"
+                  htmlFor="number"
                   className="block text-sm font-medium text-gray-700"
                 >
                   Phone Number
                 </label>
                 <Field
                   type="number"
-                  id="phoneNumber"
-                  name="phoneNumber"
+                  id="number"
+                  name="number"
                   placeholder="98XXXXXXX"
                   className="block w-full rounded-md border border-gray-200 px-4 py-3 pr-11 text-sm shadow-sm outline-none [appearance:textfield] focus:z-10 focus:border-blue-500 focus:ring-blue-500 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
                 />
                 <ErrorMessage
-                  name="phoneNumber"
+                  name="number"
                   component="div"
                   className="text-sm text-red-500"
                 />
@@ -154,13 +149,15 @@ function FormBookAppointment() {
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700">
-                  Select Date Range
+                  Select Date
                 </label>
-                <input
+                <Field
                   placeholder="Date"
                   type="date"
+                  value={selectedDate}
+                  onChange={handleDateChange}
                   className="rounded-md border border-black p-2 outline-none"
-                ></input>
+                ></Field>
                 {/* <DateRangePicker
                   ranges={dateRange}
                   onChange={handleDateSelect}
@@ -176,13 +173,22 @@ function FormBookAppointment() {
                   onChange={handleTimeChange}
                   className="block w-full rounded-md border border-gray-200 px-4 py-3 pr-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
                 >
-                  {[...Array(13).keys()].map((hour) => {
-                    const paddedHour = hour.toString().padStart(2, "0");
+                  {[...Array(12).keys()].map((hour) => {
+                    const paddedHour = (hour + 1).toString().padStart(2, "0");
                     return (
                       <option
-                        key={paddedHour}
-                        value={`${paddedHour}:00`}
-                      >{`${paddedHour}:00`}</option>
+                        key={paddedHour + "AM"}
+                        value={`${paddedHour}:00 AM`}
+                      >{`${paddedHour}:00 AM`}</option>
+                    );
+                  })}
+                  {[...Array(12).keys()].map((hour) => {
+                    const paddedHour = (hour + 1).toString().padStart(2, "0");
+                    return (
+                      <option
+                        key={paddedHour + "PM"}
+                        value={`${paddedHour}:00 PM`}
+                      >{`${paddedHour}:00 PM`}</option>
                     );
                   })}
                 </select>
