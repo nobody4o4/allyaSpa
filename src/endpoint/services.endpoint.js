@@ -42,8 +42,8 @@ const getAboutUs = () => {
   return url.get(`/aboutus`);
 };
 
-const getCounter = () => {
-  return url.get(`/counter`);
+const postBookings = (form) => {
+  return url.post("/booking", form);
 };
 
 export {
@@ -56,5 +56,5 @@ export {
   getSocial,
   getTermsCondition,
   postContact,
-  getCounter,
+  postBookings,
 };
