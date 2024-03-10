@@ -120,6 +120,14 @@ function NavBar() {
               Contact-Us
             </Link>
           </li>
+          <li>
+            <Link
+              to={"/faq"}
+              className="text-2xl font-medium text-slate-700 hover:text-gray-900"
+            >
+              FAQ
+            </Link>
+          </li>
         </ul>
       </nav>
       <div className="flex items-center space-x-8">

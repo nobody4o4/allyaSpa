@@ -5,6 +5,7 @@ import AboutUs from "../features/home/aboutUs";
 import OurServices from "../features/home/ourServices";
 import ReviewsMain from "../features/home/reviewsMain";
 import Location from "../components/Location";
+import Counter from "../components/Counter";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <OurServices />
       <Gallery />
       <MainSlider />
+      <Counter />
       <ReviewsMain />
       <Location />
     </div>

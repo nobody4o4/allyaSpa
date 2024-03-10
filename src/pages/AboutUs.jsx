@@ -2,6 +2,7 @@ import Desc from "../components/AboutUs/Desc.AboutUs";
 import Feature from "../components/AboutUs/FeaturesGrid.AboutUs";
 import { getAboutUs } from "../endpoint/services.endpoint";
 import FetchMain from "../services/fetchMain.service";
+import Faq from "./faq";
 
 function AboutUs() {
   const features = [
@@ -44,6 +45,7 @@ function AboutUs() {
     <div className="">
       <Desc {...data} />
       <Feature features={features} />
+      <Faq />
     </div>
   );
 }

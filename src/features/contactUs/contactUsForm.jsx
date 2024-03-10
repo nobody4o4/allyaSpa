@@ -128,7 +128,7 @@ export default function ContactUsForm() {
             htmlFor="phoneNumer"
             className="block text-sm font-medium text-black"
           >
-            Phone Number
+            Phone
           </label>
           <input
             type="text"
