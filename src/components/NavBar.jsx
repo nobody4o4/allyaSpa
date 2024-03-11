@@ -121,12 +121,12 @@ function NavBar() {
             </Link>
           </li>
           <li>
-            {/* <Link
-              to={"/faq"}
-              className={`text-2xl font-medium  ${path == "/faq" ? "text-slate-100 hover:text-slate-300" : "text-slate-700 hover:text-gray-900"} `}
+            <Link
+              to={"/blogs"}
+              className={`text-2xl font-medium  ${path == "/blogs" ? "text-slate-100 hover:text-slate-300" : "text-slate-700 hover:text-gray-900"} `}
             >
-              FAQ
-            </Link> */}
+              Blogs
+            </Link>
           </li>
         </ul>
       </nav>
