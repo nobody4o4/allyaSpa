@@ -1,7 +1,9 @@
 import hero from "../assets/wall.jpg";
 import ServicesTypes from "../features/services/servicesTypes";
+import FetchMain from "../services/fetchMain.service";
 
 export default function EachServices() {
+  const { data } = FetchMain();
   return (
     <div className=" mb-10 pt-[3rem]">
       <div className="flex w-full justify-center">

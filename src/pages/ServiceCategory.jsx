@@ -4,6 +4,7 @@ import TitleServiceCategory from "../components/ServiceCategory/Title.ServiceCat
 import messageIMG from "../assets/p10.jpg";
 import FetchMain from "../services/fetchMain.service";
 import { getServiceCategories } from "../endpoint/services.endpoint";
+import { Link } from "react-router-dom";
 
 function ServiceCategory() {
   // const [service, setService] = useState([]);
@@ -27,6 +28,7 @@ function ServiceCategory() {
   return (
     <div className="space-y-5">
       <TitleServiceCategory />
+<<<<<<< HEAD
       {data?.map((services, index) =>
         index % 2 === 0 ? (
           <CardServiceCategory
@@ -44,6 +46,18 @@ function ServiceCategory() {
           />
         ),
       )}
+=======
+      {data?.map((services) => (
+        <Link to={`/each-service/${services.id}`}>
+          <FlipCardServiceCategory
+            key={services.id}
+            title={services.title}
+            description={services.description}
+            image={services.image}
+          />
+        </Link>
+      ))}
+>>>>>>> 68a2240bb5109f0cae1c31f1f2bd9c438e2a8de0
       <CardServiceCategory
         title="Massage"
         description=" Lorem ipsum dolor sit amet, as ss consectetur adipiscing elit, sed

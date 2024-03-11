@@ -2,7 +2,7 @@ import FAQ from "../assets/FAQ.png";
 export default function Faq() {
   return (
     <>
-      <div className="flex items-center justify-around bg-neutralColor px-44">
+      {/* <div className="flex items-center justify-around bg-neutralColor px-44">
         <div className="w-[50%] ">
           <h1 className="text-3xl font-semibold"> FAQs</h1>
           <p>
@@ -13,16 +13,16 @@ export default function Faq() {
           </p>
         </div>
         <img src={FAQ} className="h-[20rem] w-[20rem]"></img>
-      </div>
-      <div className="mx-56 my-10 flex justify-between  gap-10">
-        <div className="w-[30%] font-semibold text-secondaryColor">
+      </div> */}
+      <div className=" my-20 flex justify-between  gap-10">
+        {/* <div className="w-[30%] font-semibold text-secondaryColor">
           <p>General Spa Information</p>
           <p>Booking and Reservations</p>
           <p>Spa Services</p>
           <p>Health and Safety</p>
-        </div>
-        <div className="flex w-[70%] flex-col gap-4 ">
-          <section className="">
+        </div> */}
+        <div className="flex w-[70rem] flex-col gap-4 ">
+          <section className="flex flex-col gap-8">
             <div className="container flex flex-col justify-center ">
               <h2 className="leadi mb-2 border-b pb-4  text-4xl font-bold text-primaryColor sm:text-5xl">
                 General Spa Information

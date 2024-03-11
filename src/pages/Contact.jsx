@@ -10,21 +10,32 @@ import {
 import ContactUsForm from "../features/contactUs/contactUsForm";
 import FetchMain from "../services/fetchMain.service";
 import { getContact } from "../endpoint/services.endpoint";
+import FAQ from "../assets/FAQ.png";
+import Faq from "./faq";
 
 export default function ContactUs() {
   const { data } = FetchMain(getContact);
 
   console.log(data);
   return (
-    <div className="h-full w-full pt-24 sm:mx-10 lg:mx-0">
-      <div className="mb-10 flex flex-col items-center justify-center">
+    <div className="h-full w-full  sm:mx-10 lg:mx-0">
+      <div className="flex items-center justify-around bg-neutralColor px-44">
+        <div className="w-[50%] ">
+          <h3 className="text-center text-4xl font-bold">Contact Us</h3>
+          <p className="text-center font-bold text-gray-600">
+            Any questions or remarks? Just write us a message.
+          </p>
+        </div>
+        <img src={FAQ} className="h-[25rem] w-[25rem]"></img>
+      </div>
+      <div className="my-10 flex flex-col items-center justify-center">
         <div className="w-full max-w-4xl">
-          <div className="mb-10 flex flex-col items-center justify-center gap-2">
+          {/* <div className="mb-10 flex flex-col items-center justify-center gap-2">
             <h3 className="text-center text-4xl font-bold">Contact Us</h3>
             <p className="text-center font-bold text-gray-600">
               Any questions or remarks? Just write us a message.
             </p>
-          </div>
+          </div> */}
           <div className="flex flex-col items-center justify-center rounded-lg shadow-xl lg:flex-row">
             <div className="h-full w-full rounded-l-lg bg-secondaryColor p-16 px-10  text-white lg:w-2/5">
               <div>
@@ -73,6 +84,7 @@ export default function ContactUs() {
             </div>
           </div>
         </div>
+        <Faq />
       </div>
     </div>
   );

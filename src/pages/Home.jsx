@@ -6,12 +6,15 @@ import OurServices from "../features/home/ourServices";
 import ReviewsMain from "../features/home/reviewsMain";
 import Location from "../components/Location";
 import Counter from "../components/Counter";
+import FetchMain from "../services/fetchMain.service";
+import { getAboutUs } from "../endpoint/services.endpoint";
 
 export default function Home() {
+  const { data } = FetchMain(getAboutUs);
   return (
     <div className="">
       <MainHeaders />
-      <AboutUs />
+      <AboutUs aboutUs={data} />
       <OurServices />
       <Gallery />
       <MainSlider />

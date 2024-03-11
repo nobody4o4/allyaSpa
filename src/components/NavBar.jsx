@@ -83,7 +83,7 @@ function NavBar() {
           <li>
             <Link
               to={"/"}
-              className="text-2xl font-medium text-slate-700 hover:text-gray-900"
+              className={`text-2xl font-medium  ${path == "/" ? "text-slate-100 hover:text-slate-300" : "text-slate-700 hover:text-gray-900"} `}
             >
               Home
             </Link>
@@ -99,7 +99,7 @@ function NavBar() {
           <li>
             <Link
               to={"/services"}
-              className="text-2xl font-medium text-slate-700 hover:text-gray-900"
+              className={`text-2xl font-medium  ${path == "/services" ? "text-slate-100 hover:text-slate-300" : "text-slate-700 hover:text-gray-900"} `}
             >
               Services
             </Link>
@@ -107,7 +107,7 @@ function NavBar() {
           <li>
             <Link
               to={"/gallery"}
-              className="text-2xl font-medium text-slate-700 hover:text-gray-900"
+              className={`text-2xl font-medium  ${path == "/gallery" ? "text-slate-100 hover:text-slate-300" : "text-slate-700 hover:text-gray-900"} `}
             >
               Gallery
             </Link>
@@ -115,18 +115,18 @@ function NavBar() {
           <li>
             <Link
               to={"/contact-us"}
-              className="text-2xl font-medium text-slate-700 hover:text-gray-900"
+              className={`text-2xl font-medium  ${path == "/contact-us" ? "text-slate-100 hover:text-slate-300" : "text-slate-700 hover:text-gray-900"} `}
             >
               Contact-Us
             </Link>
           </li>
           <li>
-            <Link
+            {/* <Link
               to={"/faq"}
-              className="text-2xl font-medium text-slate-700 hover:text-gray-900"
+              className={`text-2xl font-medium  ${path == "/faq" ? "text-slate-100 hover:text-slate-300" : "text-slate-700 hover:text-gray-900"} `}
             >
               FAQ
-            </Link>
+            </Link> */}
           </li>
         </ul>
       </nav>

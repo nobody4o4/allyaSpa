@@ -25,13 +25,16 @@ export default function MainRoute() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/specific-service" element={<SpecificService />} />
+          <Route
+            path="/each-service/:serviceId/specific-service/:id"
+            element={<SpecificService />}
+          />
           <Route path="/appointment" element={<BookAppointment />} />
           <Route path="/test" element={<TestApp />} />
           <Route path="/gallery" element={<GalleryMain />} />
           <Route path="/services" element={<ServiceCategory />} />
           <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/each-service" element={<EachServices />} />
+          <Route path="/each-service/:serviceId" element={<EachServices />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="*" element={<p>no page </p>} />

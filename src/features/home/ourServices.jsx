@@ -2,6 +2,7 @@ import { useState } from "react";
 import bill from "../../assets/bill.png";
 import Button from "../../components/Button";
 import Booking from "../../components/Booking";
+import { Link } from "react-router-dom";
 
 //TODO: Need to break into several components
 export default function OurServices() {
@@ -95,12 +96,15 @@ export default function OurServices() {
           ))}
         </div>
       </div>
-      <div className="mt-4 flex  w-full justify-center ">
+      <Link to={"/services"} className="mt-4 flex  w-full justify-center ">
         <Button title={"More Services"} />
-      </div>
-      <div className="absolute -bottom-32 w-full sm:-bottom-14 md:-bottom-20 lg:-bottom-36">
+      </Link>
+      <Link
+        to={"/appointment"}
+        className="absolute -bottom-32 w-full sm:-bottom-14 md:-bottom-20 lg:-bottom-36"
+      >
         <Booking />
-      </div>
+      </Link>
     </div>
   );
 }
