@@ -6,7 +6,7 @@ import * as Yup from "yup";
 import { postBookings } from "../endpoint/services.endpoint";
 import SelectServiceCategory from "../features/BookAppointment/ServiceCategory.BookA";
 
-function BookAppointment() {
+function TestApp() {
   const [selectedDate, setSelectedDate] = useState(
     new Date().toISOString().slice(0, 10),
   ); // Initialize with current date
@@ -195,24 +195,22 @@ function BookAppointment() {
                     })}
                   </select>
                 </div>
-                <div>
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className=" mt-2 inline-flex w-full items-center justify-center rounded bg-teal-600 px-4 py-2.5 text-base font-semibold tracking-wide text-white text-opacity-80 outline-none ring-offset-2 transition hover:text-opacity-100 focus:ring-2 focus:ring-teal-500 sm:text-lg"
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="mt-4 inline-flex w-full items-center justify-center rounded bg-teal-600 px-4 py-2.5 text-base font-semibold tracking-wide text-white text-opacity-80 outline-none ring-offset-2 transition hover:text-opacity-100 focus:ring-2 focus:ring-teal-500 sm:text-lg"
+                >
+                  {isSubmitting ? "Submitting..." : "Place Order"}
+                </button>
+                <p className="mt-10 text-center text-sm font-semibold text-gray-500">
+                  By placing this order you agree to the{" "}
+                  <a
+                    href="#"
+                    className="whitespace-nowrap text-teal-400 underline hover:text-teal-600"
                   >
-                    {isSubmitting ? "Submitting..." : "Place Order"}
-                  </button>
-                  <p className="mt-4 text-center text-sm font-semibold text-gray-500">
-                    By placing this order you agree to the{" "}
-                    <a
-                      href="#"
-                      className="whitespace-nowrap text-teal-400 underline hover:text-teal-600"
-                    >
-                      Terms and Conditions
-                    </a>
-                  </p>
-                </div>
+                    Terms and Conditions
+                  </a>
+                </p>
               </div>
             </div>
             <div className="relative col-span-full flex flex-col py-6 pl-8 pr-4 sm:py-6 lg:col-span-4 lg:py-12">
@@ -234,5 +232,4 @@ function BookAppointment() {
     </div>
   );
 }
-
-export default BookAppointment;
+export default TestApp;

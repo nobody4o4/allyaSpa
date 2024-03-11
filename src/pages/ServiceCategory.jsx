@@ -28,7 +28,6 @@ function ServiceCategory() {
   return (
     <div className="space-y-5">
       <TitleServiceCategory />
-<<<<<<< HEAD
       {data?.map((services, index) =>
         index % 2 === 0 ? (
           <CardServiceCategory
@@ -46,18 +45,6 @@ function ServiceCategory() {
           />
         ),
       )}
-=======
-      {data?.map((services) => (
-        <Link to={`/each-service/${services.id}`}>
-          <FlipCardServiceCategory
-            key={services.id}
-            title={services.title}
-            description={services.description}
-            image={services.image}
-          />
-        </Link>
-      ))}
->>>>>>> 68a2240bb5109f0cae1c31f1f2bd9c438e2a8de0
       <CardServiceCategory
         title="Massage"
         description=" Lorem ipsum dolor sit amet, as ss consectetur adipiscing elit, sed
