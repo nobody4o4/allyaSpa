@@ -16,6 +16,7 @@ const Faq = lazy(() => import("../pages/faq.jsx"));
 import NavBar from "../components/NavBar.jsx";
 import Footer from "../components/Footer.jsx";
 import LoadingScreen from "../pages/LoadingScreen.jsx";
+import TestApp from "../pages/test.jsx";
 
 export default function MainRoute() {
   return (
@@ -26,6 +27,7 @@ export default function MainRoute() {
           <Route path="/" element={<Home />} />
           <Route path="/specific-service" element={<SpecificService />} />
           <Route path="/appointment" element={<BookAppointment />} />
+          <Route path="/test" element={<TestApp />} />
           <Route path="/gallery" element={<GalleryMain />} />
           <Route path="/services" element={<ServiceCategory />} />
           <Route path="/about-us" element={<AboutUs />} />

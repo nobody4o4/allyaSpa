@@ -22,18 +22,28 @@ function ServiceCategory() {
   // }
 
   const { data } = FetchMain(getServiceCategories);
+  console.log(data);
 
   return (
     <div className="space-y-5">
       <TitleServiceCategory />
-      {data?.map((services, index) => (
-        <FlipCardServiceCategory
-          key={index}
-          title={services.title}
-          description={services.description}
-          image={services.image}
-        />
-      ))}
+      {data?.map((services, index) =>
+        index % 2 === 0 ? (
+          <CardServiceCategory
+            key={index}
+            name={services.name}
+            description={services.description}
+            image={services.image}
+          />
+        ) : (
+          <FlipCardServiceCategory
+            key={index}
+            name={services.name}
+            description={services.description}
+            image={services.image}
+          />
+        ),
+      )}
       <CardServiceCategory
         title="Massage"
         description=" Lorem ipsum dolor sit amet, as ss consectetur adipiscing elit, sed
