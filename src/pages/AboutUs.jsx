@@ -45,7 +45,6 @@ function AboutUs() {
     <div className="">
       <Desc {...data} />
       <Feature features={features} />
-      <Faq />
     </div>
   );
 }

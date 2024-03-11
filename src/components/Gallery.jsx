@@ -3,8 +3,13 @@ import image2 from "../assets/hero.jpg";
 import image3 from "../assets/p3.jpeg";
 import image4 from "../assets/p4.jpeg";
 import Button from "./Button";
+import FetchMain from "../services/fetchMain.service";
+import { getGallery } from "../endpoint/services.endpoint";
+import { Link } from "react-router-dom";
 
 function Gallery() {
+  const { data } = FetchMain(getGallery);
+
   return (
     <div className="h-[900 px] mb-10 mt-[14rem]  flex flex-col md:mx-24 lg:mx-32">
       <div className="mb-8 flex items-center justify-center">
@@ -35,9 +40,9 @@ function Gallery() {
           />
         </div>
       </div>
-      <div className="mb-4 flex justify-center">
+      <Link to={"/gallery"} className="mb-4 flex justify-center">
         <Button title="View More" className="mx-auto" />
-      </div>
+      </Link>
     </div>
   );
 }
