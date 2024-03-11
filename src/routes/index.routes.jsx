@@ -16,8 +16,12 @@ const Faq = lazy(() => import("../pages/faq.jsx"));
 import NavBar from "../components/NavBar.jsx";
 import Footer from "../components/Footer.jsx";
 import LoadingScreen from "../pages/LoadingScreen.jsx";
+<<<<<<< HEAD
 import Blogs from "../pages/blogs.jsx";
 import SpecificBlogs from "../pages/specificBlogs.jsx";
+=======
+import TestApp from "../pages/test.jsx";
+>>>>>>> e8d6a6fb227e42ad0141a62c3a4cc7c0e81d5b4f
 
 export default function MainRoute() {
   return (
@@ -31,6 +35,7 @@ export default function MainRoute() {
             element={<SpecificService />}
           />
           <Route path="/appointment" element={<BookAppointment />} />
+          <Route path="/test" element={<TestApp />} />
           <Route path="/gallery" element={<GalleryMain />} />
           <Route path="/services" element={<ServiceCategory />} />
           <Route path="/about-us" element={<AboutUs />} />

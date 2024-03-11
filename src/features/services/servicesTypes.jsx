@@ -24,7 +24,7 @@ export default function ServicesTypes() {
         </div>
         <div className="absolute -right-[36rem] hidden h-[20rem] w-full -translate-x-[140em] translate-y-[20em] rotate-[39deg] scale-[3] border-b bg-white duration-500 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:scale-100 xl:block">
           <Link to="/specific-service">
-            <FaArrowRightLong className="absolute bottom-36 left-[39%] rotate-[-40deg] text-3xl text-black " />
+            <FaArrowRightLong className="absolute bottom-36 left-[39%] rotate-[-40deg] text-3xl text-black" />
           </Link>
         </div>
       </div>
