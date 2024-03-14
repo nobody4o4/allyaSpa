@@ -3,8 +3,12 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import * as Yup from "yup";
-import { postBookings } from "../endpoint/services.endpoint";
+import {
+  getServiceCategories,
+  postBookings,
+} from "../endpoint/services.endpoint";
 import SelectServiceCategory from "../features/BookAppointment/ServiceCategory.BookA";
+import FetchMain from "../services/fetchMain.service";
 
 function BookAppointment() {
   const [selectedDate, setSelectedDate] = useState(
@@ -17,6 +21,9 @@ function BookAppointment() {
     setSelectedTime(e.target.value);
     console.log(e.target.value);
   };
+
+  const { data } = FetchMain(getServiceCategories);
+  console.log(data);
 
   const handleDateChange = (e) => {
     setSelectedDate(e.target.value);
@@ -223,8 +230,7 @@ function BookAppointment() {
               <div>
                 <div className="absolute inset-0 h-full w-full bg-gradient-to-t from-teal-300 to-teal-500 opacity-95"></div>
               </div>
-              <SelectServiceCategory />
-              <SelectServiceCategory />
+
               <SelectServiceCategory />
               <SelectServiceCategory />
             </div>

@@ -16,6 +16,10 @@ const Faq = lazy(() => import("../pages/faq.jsx"));
 import NavBar from "../components/NavBar.jsx";
 import Footer from "../components/Footer.jsx";
 import LoadingScreen from "../pages/LoadingScreen.jsx";
+
+import Blogs from "../pages/blogs.jsx";
+import SpecificBlogs from "../pages/specificBlogs.jsx";
+
 import TestApp from "../pages/test.jsx";
 
 export default function MainRoute() {
@@ -37,6 +41,8 @@ export default function MainRoute() {
           <Route path="/each-service/:serviceId" element={<EachServices />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/faq" element={<Faq />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:blog_id" element={<SpecificBlogs />} />
           <Route path="*" element={<p>no page </p>} />
         </Routes>
         <Footer />

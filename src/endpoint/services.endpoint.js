@@ -33,6 +33,11 @@ const getSocial = () => {
   return res;
 };
 
+const getFAQ = () => {
+  const res = url.get(`/faq`);
+  return res;
+};
+
 const getTermsCondition = () => {
   const res = url.get(`/terms-condition`);
   return res;
@@ -50,6 +55,7 @@ export {
   getAboutUs,
   getServiceCategories,
   getGallery,
+  getFAQ,
   getBlogs,
   getPrivacy,
   getContact,
